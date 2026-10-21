@@ -17,9 +17,16 @@ def _clamped_grid(xy_list, pad_frac=0.08, grid_n=150j, pct=(0.5, 99.5)):
 
 
 def kde_contours_multi(ax, xy_by_class, color_map, n_levels=4, max_samples=6000,
-                        fill_alpha=0.07, line_alpha=0.85, seed=0):
+                        fill_alpha=0.0, line_alpha=0.9, seed=0):
     """One KDE contour set per class, all sharing one clamped grid/view so they're
-    directly comparable. xy_by_class: dict label -> [N,2] array."""
+    directly comparable. xy_by_class: dict label -> [N,2] array.
+
+    Lines only by default (fill_alpha=0): when several classes' density bodies
+    overlap heavily -- e.g. a compact LDA projection, as opposed to t-SNE's much
+    more spread-out layout -- stacking several semi-transparent fills blends into
+    a flat, uninformative grey wash that hides the actual contour shapes. Pass a
+    positive fill_alpha explicitly for layouts where the classes are spread out
+    enough that fills stay legible."""
     xx, yy, xlim, ylim = _clamped_grid(list(xy_by_class.values()))
     grid = np.vstack([xx.ravel(), yy.ravel()])
     rng = np.random.default_rng(seed)
@@ -32,7 +39,8 @@ def kde_contours_multi(ax, xy_by_class, color_map, n_levels=4, max_samples=6000,
         levels = np.linspace(zz.max() * 0.12, zz.max(), n_levels)
         color = color_map.get(key, "#999999")
         ax.contour(xx, yy, zz, levels=levels, colors=[color], linewidths=1.1, alpha=line_alpha)
-        ax.contourf(xx, yy, zz, levels=levels, colors=[color], alpha=fill_alpha, extend="neither")
+        if fill_alpha > 0:
+            ax.contourf(xx, yy, zz, levels=levels, colors=[color], alpha=fill_alpha, extend="neither")
     ax.set_xlim(*xlim)
     ax.set_ylim(*ylim)
 
