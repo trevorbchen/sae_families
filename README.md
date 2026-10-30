@@ -42,6 +42,15 @@ correspondence between independently-trained dictionaries is needed.
   (Laplacian sharper in-distribution, breaking down/inverting OOD) cited in
   the Figure 11 paragraph.
 
+- **`plot_feature_detection_heatmap.py`** / **`plot_linear_probe_heatmap.py`** —
+  colored table renders of the planted-recovery and linear-probe summary
+  CSVs (not scatter/contour plots like the scripts above); font sizes
+  bumped for legibility at print size. `plot_paper_feature_detection_heatmap_single_lambda.py`
+  wraps the former to a single headline $\lambda$ for the main-text figure
+  (CVPR2026 Figure 5b).
+- **`make_fig03a.py`** — re-renders the EV-with-anchor bar chart (Figure 4)
+  from `proper_ev_table.csv` with larger fonts, a title, and a legend.
+
 ## Data
 
 Expects a local mirror of the matched-512 lambda-sweep checkpoints/latents
