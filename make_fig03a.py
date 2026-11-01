@@ -54,14 +54,14 @@ for bar, mean in zip(bars, means):
 
 labels = [name.replace("Fourier ", "Fourier\n") for name in df["objective"]]
 ax.set_xticks(list(x), labels, fontsize=15)
-ax.set_ylabel("Held-out latent explained variance", fontsize=16)
+ax.set_ylabel("Explained variance", fontsize=16)
 ax.set_ylim(*ylim)
 ax.yaxis.set_major_formatter(lambda value, _: f"{value:.0f}%")
 ax.tick_params(axis="y", labelsize=14)
 ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
 ax.spines[["top", "right"]].set_visible(False)
 ax.tick_params(axis="x", length=0, pad=8)
-ax.set_title("Held-out reconstruction quality survives the anchor", fontsize=16, pad=14)
+ax.set_title("Reconstruction quality of transformed SAEs", fontsize=16, pad=14)
 
 from matplotlib.patches import Patch
 handles = [Patch(facecolor=GRAY, label="MSE control (reference)"),

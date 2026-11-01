@@ -47,7 +47,7 @@ bars = ax.bar(x, means, color=colors, width=0.67, edgecolor="none", zorder=2)
 ax.errorbar(x, means, yerr=[lower, upper], fmt="none", ecolor=INK, elinewidth=1.6, capsize=5, capthick=1.6, zorder=3)
 ax.axhline(0, color=INK, linewidth=1.1)
 
-ylim = (-155, 65)
+ylim = (-155, 75)
 span = ylim[1] - ylim[0]
 ci_lo = df["ci95_low_percent"].to_numpy()
 ci_hi = df["ci95_high_percent"].to_numpy()
@@ -63,20 +63,20 @@ for bar, mean, lo, hi in zip(bars, means, ci_lo, ci_hi):
 
 labels = [name.replace("Fourier ", "Fourier\n") for name in df["objective"]]
 ax.set_xticks(list(x), labels, fontsize=15)
-ax.set_ylabel("Held-out latent explained variance", fontsize=16)
+ax.set_ylabel("Explained variance", fontsize=16)
 ax.set_ylim(*ylim)
 ax.yaxis.set_major_formatter(lambda value, _: f"{value:.0f}%")
 ax.tick_params(axis="y", labelsize=14)
 ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
 ax.spines[["top", "right"]].set_visible(False)
 ax.tick_params(axis="x", length=0, pad=8)
-ax.set_title("The anchor is necessary: EV collapses without it", fontsize=16, pad=14)
+ax.set_title("Reconstruction quality without the anchor", fontsize=16, pad=16)
 
 from matplotlib.patches import Patch
-handles = [Patch(facecolor=GRAY, label="MSE control (unaffected)"),
-           Patch(facecolor=TEAL, label="unanchored objective (collapses)")]
+handles = [Patch(facecolor=GRAY, label="MSE control"),
+           Patch(facecolor=TEAL, label="unanchored objective")]
 ax.legend(handles=handles, loc="upper right", fontsize=13, frameon=False)
 
-fig.subplots_adjust(left=0.12, right=0.99, top=0.90, bottom=0.18)
+fig.subplots_adjust(left=0.12, right=0.99, top=0.88, bottom=0.18)
 fig.savefig(OUT, facecolor="white", bbox_inches="tight")
 print("wrote", OUT)

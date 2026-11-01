@@ -105,12 +105,12 @@ def panel(ax, by_metric, metric, show_cbar_label):
 def main():
     args = parse_args()
     by_metric = load(args.summary_csv)
-    fig, axes = plt.subplots(1, 4, figsize=(29, 7.6), constrained_layout=True)
-    for k, (ax, metric) in enumerate(zip(axes, METRIC_ORDER)):
-        panel(ax, by_metric, metric, show_cbar_label=(k == len(axes) - 1))
+    fig, axes = plt.subplots(2, 2, figsize=(16, 15.5), constrained_layout=True)
+    for k, (ax, metric) in enumerate(zip(axes.flat, METRIC_ORDER)):
+        panel(ax, by_metric, metric, show_cbar_label=True)
     fig.suptitle(
         "Same-objective pairs are more similar than cross-objective pairs",
-        fontsize=19)
+        fontsize=22)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.output, dpi=200, bbox_inches="tight", facecolor="white")
     fig.savefig(args.output.with_suffix(".svg"), bbox_inches="tight", facecolor="white")
