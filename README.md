@@ -47,9 +47,28 @@ correspondence between independently-trained dictionaries is needed.
   CSVs (not scatter/contour plots like the scripts above); font sizes
   bumped for legibility at print size. `plot_paper_feature_detection_heatmap_single_lambda.py`
   wraps the former to a single headline $\lambda$ for the main-text figure
-  (CVPR2026 Figure 5b).
-- **`make_fig03a.py`** — re-renders the EV-with-anchor bar chart (Figure 4)
+  (CVPR2026 Figure 6b, `fig06_planted_recovery_heatmap_lambda10.png`).
+  `plot_feature_detection_heatmap.py`'s renderer additionally got a
+  visual-polish pass (softer custom red-cream-green colormap in place of
+  stock `RdYlGn`, units moved from each cell into the column headers, a
+  border frame and a divider under the MSE-control row) — same numbers,
+  just less "sad looking" per reviewer feedback. `plot_linear_probe_heatmap.py`
+  was deliberately **not** touched: its main-text single-$\lambda$ figure
+  (Figure 6c, `fig07_linear_probe_heatmap_lambda10.png`) has an unresolved
+  seed-aggregation data-discrepancy flagged earlier in this project and the
+  author asked to leave it as published.
+- **`make_fig03a.py`** — re-renders the EV-with-anchor bar chart (Figure 5)
   from `proper_ev_table.csv` with larger fonts, a title, and a legend.
+- **`make_fig_vocabulary_similarity.py`** — re-renders the vocabulary-
+  similarity heatmap (Figure 4, `fig:vocabulary-similarity-heatmap`,
+  `figA18_vocabulary_similarity_heatmap.png`) as a single row of four panels
+  instead of the original hand-assembled 2x2 grid, with larger fonts and a
+  tighter font-to-panel-width ratio so it stays legible once LaTeX scales it
+  to page width. Reads `pairwise_category_summary.csv` from
+  `plot_cross_seed_similarity_heatmaps.py` directly (no recomputation);
+  verified to reproduce the original's numbers exactly (e.g. MSE/MSE
+  diagonal: decoder-cosine 0.529, activation-CKA 0.377, activation-
+  correlation 0.279, atom-recurrence 0.047).
 
 ## Data
 

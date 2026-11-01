@@ -16,6 +16,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.colors import LinearSegmentedColormap
 
 METRIC_ORDER = (
     "top1_fraction_of_target_explained",
@@ -82,9 +83,15 @@ def representation_label(rep: str) -> str:
     return f"lambda={lam:g}, {OBJECTIVE_LABELS.get(objective, objective)}"
 
 
+PRETTY_CMAP = LinearSegmentedColormap.from_list(
+    "feature_detection_pretty",
+    ["#c1121f", "#f3a261", "#fdf3e1", "#8fbf9f", "#1b7a5e"],
+)
+
+
 def plot_heatmap(reps: list[str], table: pd.DataFrame, output: Path, title: str) -> None:
     n_rows, n_cols = table.shape
-    fig, ax = plt.subplots(figsize=(3.3 * n_cols + 2.6, 0.55 * n_rows + 2.0))
+    fig, ax = plt.subplots(figsize=(3.3 * n_cols + 2.6, 0.58 * n_rows + 2.1))
 
     is_reference = [rep == REFERENCE_ROW for rep in reps]
     display = np.zeros((n_rows, n_cols))
@@ -95,17 +102,20 @@ def plot_heatmap(reps: list[str], table: pd.DataFrame, output: Path, title: str)
         span = hi - lo if hi > lo else 1.0
         display[:, col_index] = np.clip((values - lo) / span, 0, 1)
 
-    cmap = plt.get_cmap("RdYlGn")
+    cmap = PRETTY_CMAP
     ax.imshow(display, cmap=cmap, vmin=0, vmax=1, aspect="auto")
 
-    ax.set_xticks(range(n_cols), [METRIC_LABELS.get(c, c) for c in table.columns], fontsize=14)
+    xlabels = [METRIC_LABELS.get(c, c).replace(
+        "(fraction of target explained)", "(% of target explained)"
+    ) for c in table.columns]
+    ax.set_xticks(range(n_cols), xlabels, fontsize=14)
     ax.set_yticks(range(n_rows), [representation_label(r) for r in reps], fontsize=14)
     ax.tick_params(length=0)
     for spine in ax.spines.values():
         spine.set_visible(False)
     ax.set_xticks(np.arange(-0.5, n_cols, 1), minor=True)
     ax.set_yticks(np.arange(-0.5, n_rows, 1), minor=True)
-    ax.grid(which="minor", color="white", linewidth=2.5)
+    ax.grid(which="minor", color="white", linewidth=3.5)
     ax.tick_params(which="minor", bottom=False, left=False)
 
     for row_index, rep in enumerate(reps):
@@ -115,16 +125,20 @@ def plot_heatmap(reps: list[str], table: pd.DataFrame, output: Path, title: str)
                 continue
             red, green, blue, _ = cmap(display[row_index, col_index])
             luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue
-            color = "white" if luminance < 0.6 else "#1f2430"
+            color = "white" if luminance < 0.55 else "#242424"
             weight = "bold" if rep == REFERENCE_ROW else "normal"
-            ax.text(col_index, row_index, f"{value * 100:.3f}%", ha="center", va="center",
-                     fontsize=15, color=color, fontweight=weight)
+            ax.text(col_index, row_index, f"{value * 100:.3f}", ha="center", va="center",
+                     fontsize=16, color=color, fontweight=weight)
 
     for row_index, rep in enumerate(reps):
         if rep == REFERENCE_ROW:
-            ax.axhline(row_index + 0.5, color="#1f2430", linewidth=1.2)
+            ax.axhline(row_index + 0.5, color="#242424", linewidth=1.6)
 
-    ax.set_title(title, fontsize=17, pad=14)
+    rect = plt.Rectangle((-0.5, -0.5), n_cols, n_rows, fill=False,
+                          edgecolor="#242424", linewidth=1.6)
+    ax.add_patch(rect)
+
+    ax.set_title(title, fontsize=18, pad=16, fontweight="semibold")
     fig.savefig(output, dpi=200, bbox_inches="tight", facecolor="white")
     fig.savefig(output.with_suffix(".svg"), bbox_inches="tight", facecolor="white")
     plt.close(fig)
