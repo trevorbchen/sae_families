@@ -14,6 +14,17 @@ correspondence between independently-trained dictionaries is needed.
 
 ## Scripts
 
+- **`make_fig10_combining.py`** — two-panel main-text figure for the
+  "combining objectives into a single model" result (CVPR2026 Figure,
+  promoted from an appendix-only single-panel chart). Panel (a): held-out
+  EV cost of a five-branch combined SAE vs. a five-branch MSE-only control
+  (reads `seed_summary.csv` from `summarize_independent_routed_seed_ci.py`
+  in `diffusion discovery/`). Panel (b): each specialist branch's relative
+  loss reduction vs. its matched MSE branch (reads
+  `specialist_vs_mse_control.csv` from
+  `evaluate_independent_routed_union_control.py`). Both source tables
+  already existed and were only re-rendered, not recomputed.
+
 - **`explore_reconstruction_tsne.py`** — per-image, h-projected, normalized
   reconstruction-residual direction, pooled across all objectives/seeds,
   embedded with t-SNE. This is the paper's new Figure 1: a direct,
@@ -107,6 +118,49 @@ correspondence between independently-trained dictionaries is needed.
   verified to reproduce the original's numbers exactly (e.g. MSE/MSE
   diagonal: decoder-cosine 0.529, activation-CKA 0.377, activation-
   correlation 0.279, atom-recurrence 0.047).
+
+- **Second polish pass** (legend/spacing/title fixes after author feedback
+  that the first pass still wasn't good enough):
+  - `make_fig03a.py` — legend moved from inside the plot (overlapped the
+    Fourier-mid/high bars) to a row above the axes, between title and bars.
+  - `make_fig03b.py` — the `-130.4%` Fourier-low label was crowding the
+    "Fourier low" x-axis tick label beneath it; increased the negative-bar
+    label offset (0.018→0.05 of the y-span) and `ylim` headroom (-155→-180)
+    so it clears the axis.
+  - `make_fig_vocabulary_similarity.py` — one row of four panels was still
+    too small at print size; switched to a 2x2 grid (roughly doubles each
+    panel's linear size once scaled to the same page width).
+  - **`replot_lda_titles.py`** (new) — re-renders the by-objective/by-seed/
+    by-fidelity LDA panels (Figures 3, 7, and the FairFace appendix figure;
+    9 panels total) from the already-saved `*_lda_embedding.npz` caches in
+    `diffusion discovery/results/tsne_hard_images/lda/`, via
+    `explore_feature_lda.py`'s own `plot_categorical_contours`/
+    `plot_fidelity` (imported, not duplicated) — does not refit LDA. Titles
+    shortened from `"{dataset}, LDA by {x}"` to just `"By {x}"`, since the
+    dataset is already named in each figure's LaTeX caption. Verified exact:
+    held-out accuracy from each cache (63.6%/63.0%/59.6%) matches what's
+    already published for FFHQ/CelebA/FairFace.
+  - `visualize_pure_cluster.py` — further title cleanup: dropped the
+    neighbor-composition percentages from the in-image title too (now just
+    "{Dataset}: images nearest the {Objective} density peak"); that detail
+    belongs in the LaTeX caption, not the image.
+  - Regenerated 2 of the 6 previously-orphaned gallery PNGs (figA19 CelebA
+    reconstruction-embedding, figA21 FairFace reconstruction-embedding) by
+    reading the anchor coordinates straight off each deployed image's own
+    (now-cleaned-up) title and replaying them as `--center-x`/`--center-y`
+    against the matching `*_reconstruction_embedding.npz` cache in
+    `diffusion discovery/results/tsne_hard_images/` — verified exact
+    (neighborhood composition and all three sampled image IDs identical to
+    what's currently deployed). **Did not** regenerate the other 4
+    (figA20/A22/A24, the "feature"/LDA-embedding galleries, and figA23,
+    FFHQ reconstruction): composition came back substantially different
+    from what's deployed (e.g. figA20 read "Laplacian 70%" in its current
+    title but regenerating against the LDA embedding's first two components
+    gave "MSE 60%, Fourier low 35%..." — not a rounding-level discrepancy,
+    a different cluster region entirely; figA23 was closer but still off,
+    85/15% → 83/17%). Something about how those anchor coordinates map onto
+    the LDA embedding doesn't reproduce correctly with the straightforward
+    "first two components" reading — flagged rather than guessed further.
 
 ## Data
 

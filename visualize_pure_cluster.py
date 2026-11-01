@@ -181,8 +181,7 @@ def main():
                 axt.set_ylabel(f"img {li}", fontsize=10, rotation=0, labelpad=30, va="center")
     fig.suptitle(
         f"{SOURCE_LABELS.get(args.source, args.source)}: images nearest the "
-        f"{OBJECTIVE_LABELS[args.highlight]} density peak\n"
-        f"{comp_str} of {len(neigh)} nearest neighbors",
+        f"{OBJECTIVE_LABELS[args.highlight]} density peak",
         fontsize=14)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.out, dpi=170, bbox_inches="tight", facecolor="white")

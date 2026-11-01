@@ -47,18 +47,20 @@ bars = ax.bar(x, means, color=colors, width=0.67, edgecolor="none", zorder=2)
 ax.errorbar(x, means, yerr=[lower, upper], fmt="none", ecolor=INK, elinewidth=1.6, capsize=5, capthick=1.6, zorder=3)
 ax.axhline(0, color=INK, linewidth=1.1)
 
-ylim = (-155, 75)
+ylim = (-180, 75)
 span = ylim[1] - ylim[0]
 ci_lo = df["ci95_low_percent"].to_numpy()
 ci_hi = df["ci95_high_percent"].to_numpy()
 for bar, mean, lo, hi in zip(bars, means, ci_lo, ci_hi):
     # Label beyond the bar's own error whisker (above for positive bars,
     # below for negative ones) so it never overlaps the whisker -- the
-    # glitch in the legacy render.
+    # glitch in the legacy render. The negative offset is larger than the
+    # positive one so the most negative label (Fourier low) still clears
+    # the x-axis category labels underneath it.
     if mean >= 0:
         y, va = hi + 0.018 * span, "bottom"
     else:
-        y, va = lo - 0.018 * span, "top"
+        y, va = lo - 0.05 * span, "top"
     ax.text(bar.get_x() + bar.get_width() / 2, y, f"{mean:.1f}%", ha="center", va=va, color=INK, weight="bold", fontsize=15)
 
 labels = [name.replace("Fourier ", "Fourier\n") for name in df["objective"]]
@@ -69,7 +71,7 @@ ax.yaxis.set_major_formatter(lambda value, _: f"{value:.0f}%")
 ax.tick_params(axis="y", labelsize=14)
 ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
 ax.spines[["top", "right"]].set_visible(False)
-ax.tick_params(axis="x", length=0, pad=8)
+ax.tick_params(axis="x", length=0, pad=16)
 ax.set_title("Reconstruction quality without the anchor", fontsize=16, pad=16)
 
 from matplotlib.patches import Patch
