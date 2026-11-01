@@ -46,7 +46,7 @@ bars = ax.bar(x, means, color=colors, width=0.67, edgecolor="none", zorder=2)
 ax.errorbar(x, means, yerr=[lower, upper], fmt="none", ecolor=INK, elinewidth=1.6, capsize=5, capthick=1.6, zorder=3)
 ax.axhline(0, color=INK, linewidth=1.1)
 
-ylim = (0, 60)
+ylim = (0, 75)
 span = ylim[1] - ylim[0]
 for bar, mean in zip(bars, means):
     y = mean + 0.018 * span
@@ -61,12 +61,12 @@ ax.tick_params(axis="y", labelsize=14)
 ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
 ax.spines[["top", "right"]].set_visible(False)
 ax.tick_params(axis="x", length=0, pad=8)
-ax.set_title("Reconstruction quality of transformed SAEs", fontsize=16, pad=38)
+ax.set_title("Reconstruction quality of transformed SAEs", fontsize=16, pad=50)
 
 from matplotlib.patches import Patch
 handles = [Patch(facecolor=GRAY, label="MSE control (reference)"),
            Patch(facecolor=TEAL, label="anchored objective (ours)")]
-ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 1.12),
+ax.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 1.17),
           ncol=2, fontsize=13, frameon=False, handletextpad=0.5, columnspacing=1.4)
 
 fig.subplots_adjust(left=0.12, right=0.99, top=0.80, bottom=0.18)
