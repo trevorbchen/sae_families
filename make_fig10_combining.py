@@ -97,7 +97,7 @@ for bar, value in zip(bars_b, reductions):
     ax_b.text(bar.get_x() + bar.get_width() / 2, value + 0.4, f"{value:.1f}%",
                ha="center", va="bottom", fontsize=14, fontweight="bold", color=INK)
 ax_b.set_xticks(list(xs), [OBJECTIVE_LABELS[o] for o in OBJECTIVE_ORDER], fontsize=13)
-ax_b.set_ylabel("Relative loss reduction\nvs. matched MSE branch", fontsize=15)
+ax_b.set_ylabel("Relative loss reduction", fontsize=15)
 ax_b.set_ylim(0, 20)
 ax_b.yaxis.set_major_formatter(lambda v, _: f"{v:.0f}%")
 ax_b.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
