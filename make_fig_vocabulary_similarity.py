@@ -29,10 +29,10 @@ OBJECTIVE_LABELS = {
 }
 METRIC_ORDER = ("decoder_cosine", "activation_cka", "activation_correlation", "shared_atoms_0p5")
 METRIC_TITLES = {
-    "decoder_cosine": "Decoder-vector\nalignment",
+    "decoder_cosine": "Decoder cosine",
     "activation_cka": "Activation CKA",
-    "activation_correlation": "Activation\ncorrelation",
-    "shared_atoms_0p5": "Strict atom\nrecurrence",
+    "activation_correlation": "Per-feature\ncorrelation",
+    "shared_atoms_0p5": "Atom recurrence",
 }
 CMAP = "coolwarm"
 
@@ -89,32 +89,28 @@ def panel(ax, by_metric, metric, show_cbar_label):
             red, green, blue, _ = image.cmap(image.norm(relative[i, j]))
             luminance = 0.2126 * red + 0.7152 * green + 0.0722 * blue
             color = "white" if luminance < 0.5 else "#1a1f26"
-            ax.text(j, i - 0.14, f'{float(record["mean"]):.2f}', ha="center", va="center",
-                     fontsize=15.5, fontweight="bold", color=color)
-            ax.text(j, i + 0.23,
-                     f'[{float(record["bootstrap_ci_low"]):.2f}, {float(record["bootstrap_ci_high"]):.2f}]',
-                     ha="center", va="center", fontsize=9.5, color=color)
+            ax.text(j, i, f'{float(record["mean"]):.2f}', ha="center", va="center",
+                     fontsize=16, fontweight="bold", color=color)
             if i == j:
                 ax.add_patch(Rectangle((j - 0.5, i - 0.5), 1, 1, fill=False,
                                         edgecolor="#1a1f26", linewidth=2.8))
 
-    ax.set_title(METRIC_TITLES[metric], fontsize=17.5, pad=15)
+    ax.set_title(METRIC_TITLES[metric], fontsize=19, pad=16)
     cbar = ax.figure.colorbar(image, ax=ax, fraction=0.046, pad=0.03, shrink=0.88)
-    cbar.ax.tick_params(labelsize=10.5)
+    cbar.ax.tick_params(labelsize=11.5)
     if show_cbar_label:
-        cbar.set_label("vs. five-vocabulary mean (%)", fontsize=10.5)
+        cbar.set_label("vs. five-vocabulary mean (%)", fontsize=11.5)
 
 
 def main():
     args = parse_args()
     by_metric = load(args.summary_csv)
-    fig, axes = plt.subplots(1, 4, figsize=(25, 7.2), constrained_layout=True)
+    fig, axes = plt.subplots(1, 4, figsize=(29, 7.6), constrained_layout=True)
     for k, (ax, metric) in enumerate(zip(axes, METRIC_ORDER)):
         panel(ax, by_metric, metric, show_cbar_label=(k == len(axes) - 1))
     fig.suptitle(
-        "Dictionary similarity across five objectives (vector_4x_k8, λ=10): "
-        "same-objective pairs (diagonal, boxed) are more similar than cross-objective pairs",
-        fontsize=16.5)
+        "Same-objective pairs are more similar than cross-objective pairs",
+        fontsize=19)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.output, dpi=200, bbox_inches="tight", facecolor="white")
     fig.savefig(args.output.with_suffix(".svg"), bbox_inches="tight", facecolor="white")

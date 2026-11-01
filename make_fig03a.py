@@ -61,7 +61,7 @@ ax.tick_params(axis="y", labelsize=14)
 ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
 ax.spines[["top", "right"]].set_visible(False)
 ax.tick_params(axis="x", length=0, pad=8)
-ax.set_title("vector_4x_k8: held-out EV, anchored objectives vs. MSE control", fontsize=16, pad=14)
+ax.set_title("Held-out reconstruction quality survives the anchor", fontsize=16, pad=14)
 
 from matplotlib.patches import Patch
 handles = [Patch(facecolor=GRAY, label="MSE control (reference)"),

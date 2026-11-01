@@ -59,6 +59,44 @@ correspondence between independently-trained dictionaries is needed.
   author asked to leave it as published.
 - **`make_fig03a.py`** — re-renders the EV-with-anchor bar chart (Figure 5)
   from `proper_ev_table.csv` with larger fonts, a title, and a legend.
+- **`make_fig03b.py`** — the appendix sibling of `make_fig03a.py`
+  (`fig:ev-without-anchor`, `fig03b_ev_without_anchor.png`): same palette,
+  fonts, and legend treatment, pointed at `pure_ev_table.csv` instead, with
+  `ylim=(-155, 65)` since these bars collapse deeply negative without the
+  anchor. Also fixes a label/error-bar overlap glitch in the legacy render
+  (`aslides/make_anchor_ev_plots.py`'s `pure_ev_table` branch, which had no
+  title/legend either) by placing each bar's value label beyond its own CI
+  whisker instead of at a fixed offset from the bar top. Verified against
+  `pure_ev_table.csv` directly: MSE control 55.3%, Laplacian -23.0%, Fourier
+  low -130.4%, Fourier mid -12.7%, Fourier high -20.6%.
+- **`visualize_pure_cluster.py`** title cleanup — the `fig.suptitle(...)` no
+  longer bakes in the raw density-anchor coordinate tuple (`anchor=(x,y)`);
+  replaced with a plain "{Dataset}: images nearest the {Objective} density
+  peak" plus the neighbor-composition line, and the column/row-label font
+  sizes were bumped (9/8pt → 13/10pt). **Not regenerated**: figA19-A24, the
+  six already-deployed gallery PNGs, since there is no recorded invocation
+  (CLI args) for them anywhere in either repo's history, and
+  `find_density_anchor`'s result depends on `--arm`/`--lambda-tag`/
+  `--recon-seed`/`--source` matching exactly — guessing those would risk
+  silently swapping in different reconstructed images. Whoever has the
+  original command can rerun it with the now-fixed script; flagged to the
+  paper author rather than guessed.
+- Also looked for a reproducible source for figA2/A6/A8/A10 (the 12
+  per-arm planted-feature-detection "full breakdown" appendix tables,
+  λ-rows × objective-columns, one top-$k$ depth per image): **no script
+  anywhere in either repo produces this table layout** —
+  `plot_feature_detection_heatmap.py`'s current `build_table()` produces a
+  different shape (rows are (λ, objective) pairs, columns are the three
+  top-$k$ depths together) than what's actually deployed. These 12 images
+  are effectively orphaned; left untouched rather than guessed at.
+- `plot_linear_probe_heatmap.py` itself needed no code changes (already
+  clean rows/columns/colors), just a plain-English `--title` instead of the
+  raw arm code it was previously invoked with:
+  `python3 plot_linear_probe_heatmap.py --summary-csv .../vector_16x_k32/general/linear_probe/summary.csv --output .../figA4_linear_probe_heatmap_all_lambda.png --title "Linear-probe accessibility (vector layout, large dictionary)"`
+  and the `spatial_16x_k32` sibling (figA12) with `--title "Linear-probe
+  accessibility (spatial layout, large dictionary)"`. Both verified to
+  reproduce the previously-deployed numbers exactly (e.g. Raw ConvAE row:
+  0.873/0.642/0.620/0.351).
 - **`make_fig_vocabulary_similarity.py`** — re-renders the vocabulary-
   similarity heatmap (Figure 4, `fig:vocabulary-similarity-heatmap`,
   `figA18_vocabulary_similarity_heatmap.png`) as a single row of four panels

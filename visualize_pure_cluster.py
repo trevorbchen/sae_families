@@ -36,6 +36,9 @@ OBJECTIVE_LABELS = {
     "latent_mse": "MSE", "laplacian": "Laplacian", "fourier_low": "Fourier low",
     "fourier_mid": "Fourier mid", "fourier_high": "Fourier high",
 }
+SOURCE_LABELS = {
+    "ffhq_heldout": "FFHQ held-out", "celeba": "CelebA", "fairface": "FairFace",
+}
 
 CACHE_BY_SOURCE = {
     "ffhq_heldout": "latents/vector_ffhq_32768.pt",
@@ -173,11 +176,14 @@ def main():
                 spine.set_edgecolor(edgecolor)
                 spine.set_linewidth(1.2)
             if row == 0:
-                axt.set_title(col_labels[col], fontsize=9)
+                axt.set_title(col_labels[col], fontsize=13)
             if col == 0:
-                axt.set_ylabel(f"img {li}", fontsize=8, rotation=0, labelpad=28, va="center")
-    fig.suptitle(f"{args.source}, pure-cluster gallery, anchor=({center[0]:.1f},{center[1]:.1f})\n"
-                 f"composition: {comp_str}  |  reconstructions at seed {args.recon_seed}", fontsize=9)
+                axt.set_ylabel(f"img {li}", fontsize=10, rotation=0, labelpad=30, va="center")
+    fig.suptitle(
+        f"{SOURCE_LABELS.get(args.source, args.source)}: images nearest the "
+        f"{OBJECTIVE_LABELS[args.highlight]} density peak\n"
+        f"{comp_str} of {len(neigh)} nearest neighbors",
+        fontsize=14)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(args.out, dpi=170, bbox_inches="tight", facecolor="white")
     plt.close(fig)
