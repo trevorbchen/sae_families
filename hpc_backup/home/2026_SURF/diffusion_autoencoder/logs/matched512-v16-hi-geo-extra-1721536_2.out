@@ -1,0 +1,26 @@
+geometry 25/100
+geometry 50/100
+geometry 75/100
+geometry 100/100
+{
+  "validation_elements": 1677824,
+  "latent_mse": 0.559617617187989,
+  "target_variance": 1.0032165457598656,
+  "residual_variance": 0.5596061165248621,
+  "latent_explained_variance": 0.44218811094169097,
+  "objective": "weighted_fourier_low",
+  "objective_label": "Fourier low",
+  "seed": 2031,
+  "lambda": 30.0,
+  "checkpoint": "/resnick/scratch/tbchen/surf_2026/sae_matched_512_v1/experiments/vector_16x_k32/checkpoints/lambda_30p0/fourier_low/seed_2031/last.pt",
+  "autoencoder_type": "vector",
+  "feature_count": 8192,
+  "k": 32,
+  "evaluated_features": 100,
+  "geometry_metrics": [
+    "laplacian_norm",
+    "fourier_low_fraction",
+    "fourier_mid_fraction",
+    "fourier_high_fraction"
+  ]
+}

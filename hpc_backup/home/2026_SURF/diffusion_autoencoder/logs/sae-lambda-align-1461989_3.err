@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_spatial_sae_vocabulary_alignment.py", line 638, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_spatial_sae_vocabulary_alignment.py", line 385, in main
+    vocabularies[key] = load_vocabulary(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_spatial_sae_vocabulary_alignment.py", line 177, in load_vocabulary
+    activations = extract_activations(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_spatial_sae_vocabulary_alignment.py", line 126, in extract_activations
+    encoder = model["encoder"].float().to(device)
+RuntimeError: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_lambda_sweep.py", line 310, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_lambda_sweep.py", line 96, in main
+    control_ev = mean(row["latent_explained_variance"] for row in control_metrics)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_lambda_sweep.py", line 56, in mean
+    return float(np.mean(np.asarray(values, dtype=float)))
+TypeError: float() argument must be a string or a real number, not 'generator'

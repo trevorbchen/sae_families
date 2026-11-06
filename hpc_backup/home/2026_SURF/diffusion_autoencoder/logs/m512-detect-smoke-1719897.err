@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 308, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 295, in main
+    summaries.append(analyze_one(
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 229, in analyze_one
+    rows = save_feature_visuals(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 154, in save_feature_visuals
+    raw_write = activations[chosen].view(activation_shape) * atom * std
+RuntimeError: The size of tensor a (8) must match the size of tensor b (512) at non-singleton dimension 1

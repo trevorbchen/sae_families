@@ -1,0 +1,31 @@
+{'step': 1, 'branches': {'mse': {'loss': 0.7104675769805908, 'latent_mse': 0.7104675769805908, 'transformed_target': None, 'gradient_norm_before_clip': 0.27250733971595764, 'rescued': 0, 'used_features': 962}, 'laplacian': {'loss': 2.1324291229248047, 'latent_mse': 0.8360438942909241, 'transformed_target': 1.2963852882385254, 'gradient_norm_before_clip': 0.6126876473426819, 'rescued': 0, 'used_features': 244}, 'fourier_low': {'loss': 1.0508967638015747, 'latent_mse': 0.8371899127960205, 'transformed_target': 0.21370691061019897, 'gradient_norm_before_clip': 0.20287783443927765, 'rescued': 0, 'used_features': 240}, 'fourier_mid': {'loss': 1.8245680332183838, 'latent_mse': 0.8370770215988159, 'transformed_target': 0.9874910712242126, 'gradient_norm_before_clip': 0.44713225960731506, 'rescued': 0, 'used_features': 238}, 'fourier_high': {'loss': 1.8889508247375488, 'latent_mse': 0.8371132016181946, 'transformed_target': 1.051837682723999, 'gradient_norm_before_clip': 0.6726067066192627, 'rescued': 0, 'used_features': 243}}}
+{'validation': {'branch_mse': {'mse': 0.7498265579342842, 'laplacian': 0.892203614115715, 'fourier_low': 0.8921589776873589, 'fourier_mid': 0.8903947174549103, 'fourier_high': 0.8917213082313538}, 'branch_ev': {'mse': 0.25983660366257266, 'laplacian': 0.11929438846804441, 'fourier_low': 0.11933844965801277, 'fourier_mid': 0.12107997352357136, 'fourier_high': 0.11977047878208424}, 'union_mse': 0.661567933857441, 'union_ev': 0.34695782157828936, 'step': 1}}
+{'validation': {'branch_mse': {'mse': 0.7466321736574173, 'laplacian': 0.8920571878552437, 'fourier_low': 0.8914400711655617, 'fourier_mid': 0.890232652425766, 'fourier_high': 0.8913753479719162}, 'branch_ev': {'mse': 0.26298982128410675, 'laplacian': 0.11943892770464071, 'fourier_low': 0.12004809149077, 'fourier_mid': 0.12123994998896814, 'fourier_high': 0.12011198058395234}, 'union_mse': 0.6618640869855881, 'union_ev': 0.3466654850334633, 'step': 10}}
+{'validation': {'branch_mse': {'mse': 0.7424381002783775, 'laplacian': 0.8922330662608147, 'fourier_low': 0.8902271240949631, 'fourier_mid': 0.889787457883358, 'fourier_high': 0.8912186026573181}, 'branch_ev': {'mse': 0.26712984481871005, 'laplacian': 0.11926531587850264, 'fourier_low': 0.12124540707509013, 'fourier_mid': 0.1216794072221814, 'fourier_high': 0.12026670589100541}, 'union_mse': 0.6623327359557152, 'union_ev': 0.34620287563433105, 'step': 20}}
+{'validation': {'branch_mse': {'mse': 0.7397436425089836, 'laplacian': 0.8925327807664871, 'fourier_low': 0.8890672251582146, 'fourier_mid': 0.8897045254707336, 'fourier_high': 0.8913448080420494}, 'branch_ev': {'mse': 0.26978957858351105, 'laplacian': 0.11896946385232032, 'fourier_low': 0.12239035816724275, 'fourier_mid': 0.12176127086857391, 'fourier_high': 0.12014212693976611}, 'union_mse': 0.6626166105270386, 'union_ev': 0.345922659410164, 'step': 30}}
+{
+  "final_latent": {
+    "branch_mse": {
+      "mse": 0.7397436425089836,
+      "laplacian": 0.8925327807664871,
+      "fourier_low": 0.8890672251582146,
+      "fourier_mid": 0.8897045254707336,
+      "fourier_high": 0.8913448080420494
+    },
+    "branch_ev": {
+      "mse": 0.26978957858351105,
+      "laplacian": 0.11896946385232032,
+      "fourier_low": 0.12239035816724275,
+      "fourier_mid": 0.12176127086857391,
+      "fourier_high": 0.12014212693976611
+    },
+    "union_mse": 0.6626166105270386,
+    "union_ev": 0.345922659410164
+  },
+  "final_transformed_targets": {
+    "laplacian": 1.1752130389213562,
+    "fourier_low": 0.22807566076517105,
+    "fourier_mid": 0.9279229864478111,
+    "fourier_high": 0.945552185177803
+  }
+}

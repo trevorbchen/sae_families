@@ -1,0 +1,74 @@
+{
+  "validation_examples": 1639,
+  "target_variance": 1.0071541997030578,
+  "capacity": {
+    "dictionary_size": 16384,
+    "active_features": 64
+  },
+  "aggregation_note": "Raw sum is the literal five-branch decoder. Mean compensates for all four independently trained specialists targeting the same residual.",
+  "results": {
+    "base": {
+      "latent_mse": 0.5346883857592059,
+      "latent_explained_variance": 0.4691097094001597,
+      "pixel_mse": 0.020516650115956322,
+      "laplacian": 0.005039080169422369,
+      "fourier_low": 4.734997581170055,
+      "fourier_mid": 0.3454937766135066,
+      "fourier_high": 0.006539698571984982
+    },
+    "base_plus_laplacian": {
+      "latent_mse": 0.5008424945980255,
+      "latent_explained_variance": 0.5027151803113263,
+      "pixel_mse": 0.017660753848059575,
+      "laplacian": 0.005065866647705281,
+      "fourier_low": 3.6263641743779256,
+      "fourier_mid": 0.3059961891087037,
+      "fourier_high": 0.006402930039105581
+    },
+    "base_plus_fourier_low": {
+      "latent_mse": 0.5016505936430022,
+      "latent_explained_variance": 0.5019128215015085,
+      "pixel_mse": 0.017149378166575486,
+      "laplacian": 0.005137560191343222,
+      "fourier_low": 3.230807736125059,
+      "fourier_mid": 0.30643688781440365,
+      "fourier_high": 0.006446974414507015
+    },
+    "base_plus_fourier_mid": {
+      "latent_mse": 0.49998702677086115,
+      "latent_explained_variance": 0.5035645714248387,
+      "pixel_mse": 0.017283582397355328,
+      "laplacian": 0.005132870311105011,
+      "fourier_low": 3.460791461565205,
+      "fourier_mid": 0.30015587755788603,
+      "fourier_high": 0.006426491291058216
+    },
+    "base_plus_fourier_high": {
+      "latent_mse": 0.5021801303260714,
+      "latent_explained_variance": 0.5013870463190933,
+      "pixel_mse": 0.017455561644533484,
+      "laplacian": 0.005103282803184307,
+      "fourier_low": 3.5000445428165157,
+      "fourier_mid": 0.3050106910032932,
+      "fourier_high": 0.006416601372645206
+    },
+    "base_plus_raw_sum": {
+      "latent_mse": 0.5095268586119768,
+      "latent_explained_variance": 0.49409250464109455,
+      "pixel_mse": 0.016094236397721406,
+      "laplacian": 0.005367139329346234,
+      "fourier_low": 2.9928308484611024,
+      "fourier_mid": 0.2831065832950343,
+      "fourier_high": 0.006683607136261325
+    },
+    "base_plus_mean": {
+      "latent_mse": 0.4771811397720067,
+      "latent_explained_variance": 0.5262084595261625,
+      "pixel_mse": 0.016176058960222776,
+      "laplacian": 0.004967323778841537,
+      "fourier_low": 3.1641069194614486,
+      "fourier_mid": 0.2836229353870394,
+      "fourier_high": 0.006153775945014893
+    }
+  }
+}

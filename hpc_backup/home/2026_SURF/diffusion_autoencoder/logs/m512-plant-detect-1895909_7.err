@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 310, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 292, in main
+    autoencoder = load_autoencoder(args.autoencoder, args.autoencoder_type, device)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/analyze_processing_residual_sae.py", line 21, in load_autoencoder
+    return load_spatial_autoencoder(path, device)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/spatial_conv_autoencoder.py", line 99, in load_spatial_autoencoder
+    model.eval().to(device)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1355, in to
+    return self._apply(convert)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 942, in _apply
+    param_applied = fn(param)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1341, in convert
+    return t.to(
+RuntimeError: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

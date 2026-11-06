@@ -1,0 +1,104 @@
+{'validation': {'step': 1, 'valid_mse': 0.8862354313185333, 'valid_ev': 0.12005996373111938, 'elapsed_seconds': 1.3334453105926514, 'clip_count': 0, 'clip_fraction': 0.0, 'longest_clip_streak': 0}}
+{'step': 1, 'training_objective_mean': 1.099226951599121, 'latent_mse': 1.0057017803192139, 'pixel_mse': None, 'aux_mse': 0.9352521896362305, 'gradient_norm_before_clip': 0.4195536673069, 'clipped': False, 'clip_count': 0, 'clip_fraction': 0.0, 'longest_clip_streak': 0, 'dominant_gradient_group': 'mse', 'cancellation_ratio': 1.0, 'used_by_group': {'mse': 254}, 'rescued': {}}
+{
+  "backend": "spatial_conv_autoencoder",
+  "uses_latent_residuals": false,
+  "mode": "regular",
+  "examples": 16384,
+  "train_examples": 14745,
+  "valid_examples": 1639,
+  "input_shape": [
+    64,
+    8,
+    8
+  ],
+  "input_dim": 4096,
+  "dict_size": 16384,
+  "total_k": 64,
+  "groups": [
+    {
+      "name": "mse",
+      "objective": "latent_mse",
+      "size": 16384,
+      "k": 64
+    }
+  ],
+  "valid_mse": 0.8862354313185333,
+  "valid_ev": 0.12005996373111938,
+  "valid_variance": 1.0071543455123901,
+  "best_valid_ev": 0.12005996373111938,
+  "valid_used_by_group": {
+    "mse": 15962
+  },
+  "rescued_by_group": {
+    "mse": 0
+  },
+  "clip_summary": {
+    "count": 0,
+    "fraction": 0.0,
+    "longest_streak": 0,
+    "dominant_group_counts": {
+      "mse": 0
+    },
+    "gradient_norm_median": 0.4195536673069,
+    "gradient_norm_p95": 0.4195536673069,
+    "gradient_norm_max": 0.4195536673069
+  },
+  "component_powers": {},
+  "validation_history": [
+    {
+      "step": 1,
+      "valid_mse": 0.8862354313185333,
+      "valid_ev": 0.12005996373111938,
+      "elapsed_seconds": 1.3334453105926514,
+      "clip_count": 0,
+      "clip_fraction": 0.0,
+      "longest_clip_streak": 0
+    }
+  ],
+  "fixed_decoder_bias": true,
+  "config": {
+    "mode": "regular",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "checkpoint": "results/spatial_conv_ae/last.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_bookkeeping_v1_smoke/original",
+    "steps": 1,
+    "batch_size": 4,
+    "lr": 0.0003,
+    "warmup": 1,
+    "grad_clip": 1.0,
+    "transform_weight": 1.0,
+    "calibration_examples": 40,
+    "aux_coeff": 0.1,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue_per_group": 4,
+    "validate_every": 1,
+    "checkpoint_every": 1,
+    "state_every": 1,
+    "trace_flush_every": 1,
+    "skip_file_hashes": true,
+    "seed": 2026,
+    "split_seed": 2026
+  },
+  "history": [
+    {
+      "step": 1,
+      "training_objective_mean": 1.099226951599121,
+      "latent_mse": 1.0057017803192139,
+      "pixel_mse": null,
+      "aux_mse": 0.9352521896362305,
+      "gradient_norm_before_clip": 0.4195536673069,
+      "clipped": false,
+      "clip_count": 0,
+      "clip_fraction": 0.0,
+      "longest_clip_streak": 0,
+      "dominant_gradient_group": "mse",
+      "cancellation_ratio": 1.0,
+      "used_by_group": {
+        "mse": 254
+      },
+      "rescued": {}
+    }
+  ]
+}

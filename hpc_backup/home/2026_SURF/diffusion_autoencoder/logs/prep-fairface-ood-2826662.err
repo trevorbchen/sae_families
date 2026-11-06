@@ -1,0 +1,58 @@
+
+thread 'hf-xet-1' (591975) panicked at /home/runner/work/xet-core/xet-core/xet_client/src/cas_client/remote_client.rs:85:22:
+called `Result::unwrap()` on an `Err` value: InternalError(Reqwest error: builder error
+
+Caused by:
+    0: builder error
+    1: unexpected error: No CA certificates were loaded from the system)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/prepare_fairface_ood_cache.py", line 83, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/prepare_fairface_ood_cache.py", line 53, in main
+    dataset = load_dataset(args.dataset, args.config, split=args.split, streaming=False)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/load.py", line 1718, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/builder.py", line 890, in download_and_prepare
+    self._download_and_prepare(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/builder.py", line 929, in _download_and_prepare
+    split_generators: list[SplitGenerator] = self._split_generators(dl_manager, **split_generators_kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/packaged_modules/parquet/parquet.py", line 119, in _split_generators
+    data_files = dl_manager.download(self.config.data_files)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 159, in download
+    downloaded_path_or_paths = map_nested(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 502, in map_nested
+    mapped = [
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 503, in <listcomp>
+    map_nested(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 519, in map_nested
+    mapped = [
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 520, in <listcomp>
+    _single_map_nested((function, obj, batched, batch_size, types, None, True, None))
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 388, in _single_map_nested
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 388, in <listcomp>
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 219, in _download_batched
+    return [
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 220, in <listcomp>
+    self._download_single(url_or_filename, download_config=download_config)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 229, in _download_single
+    out = cached_path(url_or_filename, download_config=download_config)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/datasets/utils/file_utils.py", line 182, in cached_path
+    output_path = huggingface_hub.HfApi(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 5467, in hf_hub_download
+    return hf_hub_download(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1014, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1727, in _download_to_tmp_and_move
+    xet_get(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 633, in xet_get
+    download_files(
+RuntimeError: Internal error: Task panic: "JoinError::Panic(Id(5), \"called `Result::unwrap()` on an `Err` value: InternalError(Reqwest error: builder error\\n\\nCaused by:\\n    0: builder error\\n    1: unexpected error: No CA certificates were loaded from the system)\", ...)"

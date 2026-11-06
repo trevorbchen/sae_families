@@ -1,0 +1,13 @@
+[rank: 0] Global seed set to 0
+/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py:306: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.conf.fp16):
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/generate_bsf_variant_grids.py", line 141, in <module>
+    main()
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/generate_bsf_variant_grids.py", line 98, in main
+    coeff = model.encoder(x - model.dec_bias).view(args.examples, model.n_blocks, model.block_dim)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1940, in __getattr__
+    raise AttributeError(
+AttributeError: 'GrassmannianBSF' object has no attribute 'encoder'. Did you mean: 'encode'?

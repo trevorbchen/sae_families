@@ -1,0 +1,52 @@
+{'gradient_calibration': {'method': 'fixed_initial_output_gradient_ratio', 'target_ratio': 0.1, 'examples': 32, 'mse_to_transformed_norm_ratio': {'median': 0.02156972885131836, 'p05': 0.012988751055672765, 'p95': 0.04784798342734574}, 'transform_weight': 0.002156972885131836}}
+{'step': 1, 'loss': 0.11411747336387634, 'latent_mse': 0.102089524269104, 'transformed_loss': 0.9027023315429688, 'pixel_mse': 0.003660507733002305, 'transform_weight': 0.002156972885131836, 'gradient_norm_before_clip': 0.010208982974290848, 'used_features': 63, 'rescued': 0, 'elapsed_seconds': 0.4732074737548828}
+{'validation': {'base_mse': 0.4986301445975545, 'latent_mse': 0.4902355353813334, 'transformed_loss': 3.640841353150531, 'pixel_mse': 0.017632401793231462, 'step': 1, 'valid_ev': 0.5132468647276442, 'mse_ratio_to_base': 0.9831646575980753, 'feasible': True, 'elapsed_seconds': 10.278298139572144}}
+{
+  "base_mse": 0.4986301445975545,
+  "latent_mse": 0.4902355353813334,
+  "transformed_loss": 3.640841353150531,
+  "pixel_mse": 0.017632401793231462,
+  "objective": "fourier_low",
+  "steps": 1,
+  "transform_weight": 0.002156972885131836,
+  "best_feasible_transformed_loss": 3.640841353150531,
+  "best_valid_ev": 0.5132468647276442,
+  "valid_ev": 0.5132468647276442,
+  "mse_ratio_to_base": 0.9831646575980753,
+  "used_features": 63,
+  "gradient_calibration": {
+    "method": "fixed_initial_output_gradient_ratio",
+    "target_ratio": 0.1,
+    "examples": 32,
+    "mse_to_transformed_norm_ratio": {
+      "median": 0.02156972885131836,
+      "p05": 0.012988751055672765,
+      "p95": 0.04784798342734574
+    },
+    "transform_weight": 0.002156972885131836
+  },
+  "config": {
+    "objective": "fourier_low",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "autoencoder": "results/spatial_conv_ae/last.pt",
+    "base_sae": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_bookkeeping_v1/original_16k_k64_seed2026/last.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/spatial_residual_specialists_v1_smoke/fourier_low",
+    "feature_count": 2048,
+    "k": 8,
+    "steps": 1,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "lr_warmup": 1,
+    "lambda_warmup": 1,
+    "gradient_target_ratio": 0.1,
+    "calibration_examples": 32,
+    "mse_tolerance": 0.02,
+    "aux_coeff": 0.1,
+    "grad_clip": 1.0,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue": 64,
+    "validate_every": 1,
+    "seed": 2026
+  }
+}

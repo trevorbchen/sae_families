@@ -1,0 +1,9 @@
+h computed for 2000 images in ffhq_heldout
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/plot_residual_tsne_hprojected.py", line 262, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/plot_residual_tsne_hprojected.py", line 234, in main
+    embedding = run_embedding(matrix, args.perplexity, args.early_exaggeration, args.n_iter, args.pca_dims)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/plot_residual_tsne_hprojected.py", line 138, in run_embedding
+    return TSNE(n_components=2, init="pca", perplexity=effective, early_exaggeration=early_exaggeration,
+TypeError: TSNE.__init__() got an unexpected keyword argument 'n_iter'

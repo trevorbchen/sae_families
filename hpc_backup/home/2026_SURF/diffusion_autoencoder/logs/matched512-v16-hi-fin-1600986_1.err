@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/aggregate_feature_output_geometry.py", line 171, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/aggregate_feature_output_geometry.py", line 75, in main
+    loaded = read_csv(directory / f"seed_{seed}" / "feature_means.csv")
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/aggregate_feature_output_geometry.py", line 31, in read_csv
+    with Path(path).open(newline="") as handle:
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/resnick/scratch/tbchen/surf_2026/sae_matched_512_v1/experiments/spatial_4x_k8/geometry/mse_control/seed_2030/feature_means.csv'

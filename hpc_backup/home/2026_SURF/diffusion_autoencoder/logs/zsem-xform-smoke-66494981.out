@@ -1,0 +1,91 @@
+Model params: 122.59 M
+calibration 4/40
+calibration 40/40
+{'step': 1, 'transformed_loss': 0.4606599807739258, 'latent_mse_monitor_only': 2.580655097961426, 'active_mean': 128.0, 'used_features': 252, 'dead_features': 0, 'rescued': 0, 'gradient_norm_before_clip': 1.4326038360595703}
+{
+  "objective": "gradient",
+  "pure_transformed_objective": true,
+  "pixel_or_latent_anchor_coefficient": 0.0,
+  "examples": 1024,
+  "train_examples": 921,
+  "valid_examples": 103,
+  "used_features": 497,
+  "dead_features_at_end": 0,
+  "rescued_total": 0,
+  "valid_transformed_loss": 2.3170909773088195,
+  "valid_pixel_mse_monitor_only": 0.0186146936939975,
+  "valid_latent_mse_monitor_only": 2.649594464348358,
+  "component_powers": [
+    [
+      0.001977817853912711,
+      0.0017106331652030349
+    ],
+    [
+      0.0020796582102775574,
+      0.001247471896931529
+    ],
+    [
+      0.0032298360019922256,
+      0.0015296367928385735
+    ],
+    [
+      0.0013002714840695262,
+      0.0009943090844899416
+    ],
+    [
+      0.0011541866697371006,
+      0.0011099084513261914
+    ],
+    [
+      0.0012628622353076935,
+      0.0011388331186026335
+    ],
+    [
+      0.0017928804736584425,
+      0.000993350869975984
+    ],
+    [
+      0.0010379746090620756,
+      0.0009971725521609187
+    ],
+    [
+      0.0010919205378741026,
+      0.0011198290158063173
+    ],
+    [
+      0.004115191288292408,
+      0.0037129309494048357
+    ]
+  ],
+  "history": [
+    {
+      "step": 1,
+      "transformed_loss": 0.4606599807739258,
+      "latent_mse_monitor_only": 2.580655097961426,
+      "active_mean": 128.0,
+      "used_features": 252,
+      "dead_features": 0,
+      "rescued": 0,
+      "gradient_norm_before_clip": 1.4326038360595703
+    }
+  ],
+  "config": {
+    "objective": "gradient",
+    "repo": "official_diffae",
+    "checkpoint": "official_diffae/checkpoints/ffhq128_autoenc/last.ckpt",
+    "data": "/resnick/scratch/tbchen/surf_2026/zsem_objective_audit/pilot_1024.pt",
+    "out_dir": "results/zsem_transformed_smoke/gradient",
+    "dict_mult": 32,
+    "k": 128,
+    "steps": 2,
+    "batch_size": 2,
+    "lr": 0.0003,
+    "warmup": 1,
+    "grad_clip": 1.0,
+    "calibration_examples": 40,
+    "reinit_every": 0,
+    "dead_after": 3000,
+    "max_rescue": 256,
+    "seed": 2030
+  }
+}

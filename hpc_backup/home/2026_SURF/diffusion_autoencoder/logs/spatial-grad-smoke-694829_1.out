@@ -1,0 +1,187 @@
+{'gradient_calibration': {'method': 'per_batch_output_gradient_norm', 'target_ratio': 1.0, 'loss_normalization': 'none'}}
+{'validation': {'step': 1, 'valid_mse': 0.886792911124564, 'valid_ev': 0.11950644399651789, 'elapsed_seconds': 1.0617871284484863, 'clip_count': 0, 'clip_fraction': 0.0, 'longest_clip_streak': 0}}
+{'step': 1, 'training_objective_mean': 0.39763665199279785, 'latent_mse': 0.8605316281318665, 'pixel_mse': 0.05057907849550247, 'aux_mse': 0.84710693359375, 'gradient_norm_before_clip': 0.2682950794696808, 'clipped': False, 'clip_count': 0, 'clip_fraction': 0.0, 'longest_clip_streak': 0, 'dominant_gradient_group': 'mse', 'cancellation_ratio': 0.49744099378585815, 'used_by_group': {'mse': 248, 'laplacian': 63, 'fourier_low': 61, 'fourier_mid': 63, 'fourier_high': 62}, 'rescued': {}}
+{
+  "backend": "spatial_conv_autoencoder",
+  "uses_latent_residuals": false,
+  "mode": "grouped_pure",
+  "examples": 16384,
+  "train_examples": 14745,
+  "valid_examples": 1639,
+  "input_shape": [
+    64,
+    8,
+    8
+  ],
+  "input_dim": 4096,
+  "dict_size": 16384,
+  "total_k": 64,
+  "groups": [
+    {
+      "name": "mse",
+      "objective": "latent_mse",
+      "size": 8192,
+      "k": 32
+    },
+    {
+      "name": "laplacian",
+      "objective": "laplacian",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_low",
+      "objective": "fourier_low",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_mid",
+      "objective": "fourier_mid",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_high",
+      "objective": "fourier_high",
+      "size": 2048,
+      "k": 8
+    }
+  ],
+  "valid_mse": 0.886792911124564,
+  "valid_ev": 0.11950644399651789,
+  "valid_variance": 1.0071543455123901,
+  "best_valid_ev": 0.11950644399651789,
+  "valid_used_by_group": {
+    "mse": 7978,
+    "laplacian": 2005,
+    "fourier_low": 1993,
+    "fourier_mid": 2005,
+    "fourier_high": 2002
+  },
+  "rescued_by_group": {
+    "mse": 0,
+    "laplacian": 0,
+    "fourier_low": 0,
+    "fourier_mid": 0,
+    "fourier_high": 0
+  },
+  "clip_summary": {
+    "count": 0,
+    "fraction": 0.0,
+    "longest_streak": 0,
+    "dominant_group_counts": {
+      "mse": 0,
+      "laplacian": 0,
+      "fourier_low": 0,
+      "fourier_mid": 0,
+      "fourier_high": 0
+    },
+    "gradient_norm_median": 0.2682950794696808,
+    "gradient_norm_p95": 0.2682950794696808,
+    "gradient_norm_max": 0.2682950794696808
+  },
+  "component_powers": {},
+  "objective_lambda_by_group": {
+    "laplacian": 23.74933433532715,
+    "fourier_low": 0.005177967716008425,
+    "fourier_mid": 0.43203985691070557,
+    "fourier_high": 18.13636016845703
+  },
+  "objective_lambda_summary": {
+    "laplacian": {
+      "median": 23.74933433532715,
+      "p05": 23.74933433532715,
+      "p95": 23.74933433532715,
+      "final": 23.74933433532715
+    },
+    "fourier_low": {
+      "median": 0.005177967716008425,
+      "p05": 0.005177967716008425,
+      "p95": 0.005177967716008425,
+      "final": 0.005177967716008425
+    },
+    "fourier_mid": {
+      "median": 0.43203985691070557,
+      "p05": 0.43203985691070557,
+      "p95": 0.43203985691070557,
+      "final": 0.43203985691070557
+    },
+    "fourier_high": {
+      "median": 18.13636016845703,
+      "p05": 18.13636016845703,
+      "p95": 18.13636016845703,
+      "final": 18.13636016845703
+    }
+  },
+  "gradient_calibration": {
+    "method": "per_batch_output_gradient_norm",
+    "target_ratio": 1.0,
+    "loss_normalization": "none"
+  },
+  "parameter_gradient_target": 0.18041206896305084,
+  "validation_history": [
+    {
+      "step": 1,
+      "valid_mse": 0.886792911124564,
+      "valid_ev": 0.11950644399651789,
+      "elapsed_seconds": 1.0617871284484863,
+      "clip_count": 0,
+      "clip_fraction": 0.0,
+      "longest_clip_streak": 0
+    }
+  ],
+  "fixed_decoder_bias": true,
+  "config": {
+    "mode": "grouped_pure",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "checkpoint": "results/spatial_conv_ae/last.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_gradient_only_v4_smoke/transformed_loss",
+    "steps": 1,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "warmup": 1,
+    "grad_clip": 1.0,
+    "transform_weight": 1.0,
+    "loss_normalization": "none",
+    "lambda_mode": "dynamic_gradient",
+    "gradient_target_ratio": 1.0,
+    "parameter_gradient_cap": "initial_mse",
+    "calibration_examples": 64,
+    "aux_coeff": 0.1,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue_per_group": 8,
+    "validate_every": 1,
+    "checkpoint_every": 1,
+    "state_every": 1,
+    "trace_flush_every": 1,
+    "skip_file_hashes": true,
+    "seed": 2026,
+    "split_seed": 2026
+  },
+  "history": [
+    {
+      "step": 1,
+      "training_objective_mean": 0.39763665199279785,
+      "latent_mse": 0.8605316281318665,
+      "pixel_mse": 0.05057907849550247,
+      "aux_mse": 0.84710693359375,
+      "gradient_norm_before_clip": 0.2682950794696808,
+      "clipped": false,
+      "clip_count": 0,
+      "clip_fraction": 0.0,
+      "longest_clip_streak": 0,
+      "dominant_gradient_group": "mse",
+      "cancellation_ratio": 0.49744099378585815,
+      "used_by_group": {
+        "mse": 248,
+        "laplacian": 63,
+        "fourier_low": 61,
+        "fourier_mid": 63,
+        "fourier_high": 62
+      },
+      "rescued": {}
+    }
+  ]
+}

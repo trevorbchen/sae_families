@@ -1,0 +1,363 @@
+Model params: 122.59 M
+calibration 4/40
+calibration 40/40
+calibration 4/40
+calibration 40/40
+calibration 4/40
+calibration 40/40
+calibration 4/40
+calibration 40/40
+{'validation': {'step': 1, 'valid_mse': 1.0889577864145927, 'valid_ev': -0.08765691958731714, 'elapsed_seconds': 0.9883639812469482, 'clip_count': 1, 'clip_fraction': 1.0, 'longest_clip_streak': 1}}
+{'step': 1, 'training_objective_mean': 0.9559585452079773, 'latent_mse': 1.010584831237793, 'pixel_mse': 0.00911877304315567, 'aux_mse': 1.2266720533370972, 'gradient_norm_before_clip': 14.32608413696289, 'clipped': True, 'clip_count': 1, 'clip_fraction': 1.0, 'longest_clip_streak': 1, 'dominant_gradient_group': 'laplacian', 'cancellation_ratio': 0.6076787710189819, 'active_by_group': {'mse': 32.0, 'laplacian': 8.0, 'fourier_low': 8.0, 'fourier_mid': 8.0, 'fourier_high': 8.0}, 'used_by_group': {'mse': 127, 'laplacian': 32, 'fourier_low': 32, 'fourier_mid': 32, 'fourier_high': 32}, 'rescued': {}}
+{
+  "mode": "grouped_pure",
+  "examples": 16384,
+  "train_examples": 14745,
+  "valid_examples": 1639,
+  "input_dim": 512,
+  "dict_size": 16384,
+  "total_k": 64,
+  "groups": [
+    {
+      "name": "mse",
+      "objective": "latent_mse",
+      "size": 8192,
+      "k": 32
+    },
+    {
+      "name": "laplacian",
+      "objective": "laplacian",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_low",
+      "objective": "fourier_low",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_mid",
+      "objective": "fourier_mid",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_high",
+      "objective": "fourier_high",
+      "size": 2048,
+      "k": 8
+    }
+  ],
+  "valid_mse": 1.0889577864145927,
+  "valid_ev": -0.08765691958731714,
+  "valid_variance": 1.001196026802063,
+  "valid_used_by_group": {
+    "mse": 8090,
+    "laplacian": 2025,
+    "fourier_low": 2029,
+    "fourier_mid": 2023,
+    "fourier_high": 2025
+  },
+  "rescued_by_group": {
+    "mse": 0,
+    "laplacian": 0,
+    "fourier_low": 0,
+    "fourier_mid": 0,
+    "fourier_high": 0
+  },
+  "clip_summary": {
+    "count": 1,
+    "fraction": 1.0,
+    "longest_streak": 1,
+    "dominant_group_counts": {
+      "mse": 0,
+      "laplacian": 1,
+      "fourier_low": 0,
+      "fourier_mid": 0,
+      "fourier_high": 0
+    },
+    "gradient_norm_median": 14.32608413696289,
+    "gradient_norm_p95": 14.32608413696289,
+    "gradient_norm_max": 14.32608413696289
+  },
+  "validation_history": [
+    {
+      "step": 1,
+      "valid_mse": 1.0889577864145927,
+      "valid_ev": -0.08765691958731714,
+      "elapsed_seconds": 0.9883639812469482,
+      "clip_count": 1,
+      "clip_fraction": 1.0,
+      "longest_clip_streak": 1
+    }
+  ],
+  "best_valid_ev": -0.08765691958731714,
+  "component_powers": {
+    "laplacian": [
+      [
+        0.0060563599690794945
+      ],
+      [
+        0.002402890706434846
+      ],
+      [
+        0.003153248457238078
+      ],
+      [
+        0.0026252930983901024
+      ],
+      [
+        0.0030760769732296467
+      ],
+      [
+        0.0010271850042045116
+      ],
+      [
+        0.0013512737350538373
+      ],
+      [
+        0.002330460585653782
+      ],
+      [
+        0.005328655242919922
+      ],
+      [
+        0.044433023780584335
+      ]
+    ],
+    "fourier_low": [
+      [
+        510.0543518066406,
+        8.020536422729492
+      ],
+      [
+        630.4594116210938,
+        5.034683704376221
+      ],
+      [
+        683.9856567382812,
+        7.045473098754883
+      ],
+      [
+        774.8863525390625,
+        9.170438766479492
+      ],
+      [
+        501.9019775390625,
+        5.92533540725708
+      ],
+      [
+        572.3353271484375,
+        6.1345648765563965
+      ],
+      [
+        542.3046875,
+        6.536900997161865
+      ],
+      [
+        777.1480102539062,
+        7.2577972412109375
+      ],
+      [
+        556.7702026367188,
+        7.7390313148498535
+      ],
+      [
+        770.6653442382812,
+        7.406001091003418
+      ]
+    ],
+    "fourier_mid": [
+      [
+        1.4010498523712158,
+        0.150877445936203
+      ],
+      [
+        0.9042263627052307,
+        0.09578818827867508
+      ],
+      [
+        1.031810998916626,
+        0.13773447275161743
+      ],
+      [
+        1.2262364625930786,
+        0.1183869019150734
+      ],
+      [
+        1.04911208152771,
+        0.12995778024196625
+      ],
+      [
+        1.093153953552246,
+        0.0854419618844986
+      ],
+      [
+        0.7560229301452637,
+        0.07983969151973724
+      ],
+      [
+        1.359742283821106,
+        0.11218868941068649
+      ],
+      [
+        0.9001035094261169,
+        0.09871483594179153
+      ],
+      [
+        1.0239901542663574,
+        0.09752435237169266
+      ]
+    ],
+    "fourier_high": [
+      [
+        0.01651274412870407,
+        0.0008978623664006591
+      ],
+      [
+        0.008260182105004787,
+        0.0004115670162718743
+      ],
+      [
+        0.012480544857680798,
+        0.0007894018199294806
+      ],
+      [
+        0.010393599979579449,
+        0.0005529748741537333
+      ],
+      [
+        0.012904409319162369,
+        0.0006907539791427553
+      ],
+      [
+        0.006882889661937952,
+        0.000541448185686022
+      ],
+      [
+        0.006095581222325563,
+        0.00039722330984659493
+      ],
+      [
+        0.009307678788900375,
+        0.0006575120496563613
+      ],
+      [
+        0.009043769910931587,
+        0.0007696879329159856
+      ],
+      [
+        0.011622671969234943,
+        0.0026992226485162973
+      ]
+    ]
+  },
+  "power_counts": {
+    "laplacian": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "fourier_low": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "fourier_mid": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "fourier_high": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "fixed_decoder_bias": true,
+  "config": {
+    "mode": "grouped_pure",
+    "repo": "official_diffae",
+    "checkpoint": "official_diffae/checkpoints/ffhq128_autoenc/last.ckpt",
+    "data": "/resnick/scratch/tbchen/surf_2026/zsem_transformed/ffhq_16384.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/grouped_objective_sae_bookkeeping_v2_smoke/transformed_loss",
+    "steps": 1,
+    "batch_size": 4,
+    "lr": 0.0003,
+    "warmup": 1,
+    "grad_clip": 1.0,
+    "transform_weight": 1.0,
+    "calibration_examples": 40,
+    "aux_coeff": 0.1,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue_per_group": 4,
+    "validate_every": 1,
+    "checkpoint_every": 1,
+    "state_every": 1,
+    "trace_flush_every": 1,
+    "skip_file_hashes": true,
+    "seed": 2026,
+    "split_seed": 2026
+  },
+  "history": [
+    {
+      "step": 1,
+      "training_objective_mean": 0.9559585452079773,
+      "latent_mse": 1.010584831237793,
+      "pixel_mse": 0.00911877304315567,
+      "aux_mse": 1.2266720533370972,
+      "gradient_norm_before_clip": 14.32608413696289,
+      "clipped": true,
+      "clip_count": 1,
+      "clip_fraction": 1.0,
+      "longest_clip_streak": 1,
+      "dominant_gradient_group": "laplacian",
+      "cancellation_ratio": 0.6076787710189819,
+      "active_by_group": {
+        "mse": 32.0,
+        "laplacian": 8.0,
+        "fourier_low": 8.0,
+        "fourier_mid": 8.0,
+        "fourier_high": 8.0
+      },
+      "used_by_group": {
+        "mse": 127,
+        "laplacian": 32,
+        "fourier_low": 32,
+        "fourier_mid": 32,
+        "fourier_high": 32
+      },
+      "rescued": {}
+    }
+  ]
+}

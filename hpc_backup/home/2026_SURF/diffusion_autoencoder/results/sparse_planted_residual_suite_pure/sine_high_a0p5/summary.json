@@ -1,0 +1,731 @@
+{
+  "processing_feature": {
+    "feature": "sine_fixed",
+    "target": "sparse_transformed_latent_minus_clean_latent",
+    "prevalence": 0.1,
+    "train_positive_count": 1474,
+    "valid_positive_count": 164,
+    "amplitude": 0.5,
+    "frequency_x": 17,
+    "frequency_y": 17,
+    "phase": 0.0,
+    "jpeg_quality": null,
+    "seed": 260810
+  },
+  "runs": [
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "latent_mse",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8272042134913002,
+      "evaluation_full_sae_mse": 0.4922767197213522,
+      "evaluation_top1_mse": 0.6519974662036431,
+      "evaluation_top5_mse": 0.5883160637646186,
+      "evaluation_top10_mse": 0.5522561096563572,
+      "top1_fraction_of_sae_improvement": 0.52311843771178,
+      "top5_fraction_of_sae_improvement": 0.7132533284674649,
+      "top10_fraction_of_sae_improvement": 0.8209182851491938,
+      "mean_positive_direction_best_feature": 3344,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.8927969336509705,
+      "mean_positive_direction_feature_ablation_rank": 1,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 3344,
+          "mean_exact_ablation_loss_increase": 0.14314930968814427,
+          "mean_active_activation_in_examples": 63.82924270629883,
+          "evaluation_activation_rate": 0.0890243873000145,
+          "visualization": "latent_mse_seed_2030_rank_01_feature_3344_signed_delta_x16.png",
+          "discovery_activation_rate": 0.1111111111111111,
+          "discovery_mean_activation_when_active": 62.872480769733805
+        },
+        {
+          "rank": 2,
+          "feature": 2362,
+          "mean_exact_ablation_loss_increase": 0.028060014338047223,
+          "mean_active_activation_in_examples": 23.666414260864258,
+          "evaluation_activation_rate": 0.07439024746417999,
+          "visualization": "latent_mse_seed_2030_rank_02_feature_2362_signed_delta_x16.png",
+          "discovery_activation_rate": 0.09401709401709402,
+          "discovery_mean_activation_when_active": 25.35565129503027
+        },
+        {
+          "rank": 3,
+          "feature": 1499,
+          "mean_exact_ablation_loss_increase": 0.013719933902573577,
+          "mean_active_activation_in_examples": 17.706336975097656,
+          "evaluation_activation_rate": 0.04024390131235123,
+          "visualization": "latent_mse_seed_2030_rank_03_feature_1499_signed_delta_x16.png",
+          "discovery_activation_rate": 0.0695970695970696,
+          "discovery_mean_activation_when_active": 18.205010336742067
+        },
+        {
+          "rank": 4,
+          "feature": 2390,
+          "mean_exact_ablation_loss_increase": 0.013540111197430472,
+          "mean_active_activation_in_examples": 19.022308349609375,
+          "evaluation_activation_rate": 0.06463414430618286,
+          "visualization": "latent_mse_seed_2030_rank_04_feature_2390_signed_delta_x16.png",
+          "discovery_activation_rate": 0.06349206349206349,
+          "discovery_mean_activation_when_active": 20.717146353079723
+        },
+        {
+          "rank": 5,
+          "feature": 1389,
+          "mean_exact_ablation_loss_increase": 0.011839647831392994,
+          "mean_active_activation_in_examples": 18.43770408630371,
+          "evaluation_activation_rate": 0.04512195289134979,
+          "visualization": "latent_mse_seed_2030_rank_05_feature_1389_signed_delta_x16.png",
+          "discovery_activation_rate": 0.06105006105006105,
+          "discovery_mean_activation_when_active": 18.43292983174324
+        },
+        {
+          "rank": 6,
+          "feature": 1501,
+          "mean_exact_ablation_loss_increase": 0.009542496122422108,
+          "mean_active_activation_in_examples": 16.567401885986328,
+          "evaluation_activation_rate": 0.04756097495555878,
+          "visualization": "latent_mse_seed_2030_rank_06_feature_1501_signed_delta_x16.png",
+          "discovery_activation_rate": 0.06593406593406594,
+          "discovery_mean_activation_when_active": 16.261817947581964
+        },
+        {
+          "rank": 7,
+          "feature": 2547,
+          "mean_exact_ablation_loss_increase": 0.008851650824556547,
+          "mean_active_activation_in_examples": 16.072296142578125,
+          "evaluation_activation_rate": 0.04512195289134979,
+          "visualization": "latent_mse_seed_2030_rank_07_feature_2547_signed_delta_x16.png",
+          "discovery_activation_rate": 0.07448107448107448,
+          "discovery_mean_activation_when_active": 14.833729255394857
+        },
+        {
+          "rank": 8,
+          "feature": 3033,
+          "mean_exact_ablation_loss_increase": 0.006196730043179036,
+          "mean_active_activation_in_examples": 11.591788291931152,
+          "evaluation_activation_rate": 0.03536585345864296,
+          "visualization": "latent_mse_seed_2030_rank_08_feature_3033_signed_delta_x16.png",
+          "discovery_activation_rate": 0.05982905982905983,
+          "discovery_mean_activation_when_active": 12.575782081302332
+        },
+        {
+          "rank": 9,
+          "feature": 2152,
+          "mean_exact_ablation_loss_increase": 0.006164422778730248,
+          "mean_active_activation_in_examples": 16.05692481994629,
+          "evaluation_activation_rate": 0.05731707438826561,
+          "visualization": "latent_mse_seed_2030_rank_09_feature_2152_signed_delta_x16.png",
+          "discovery_activation_rate": 0.06715506715506715,
+          "discovery_mean_activation_when_active": 14.275138846310702
+        },
+        {
+          "rank": 10,
+          "feature": 2699,
+          "mean_exact_ablation_loss_increase": 0.005539704205099293,
+          "mean_active_activation_in_examples": 14.196662902832031,
+          "evaluation_activation_rate": 0.04756097495555878,
+          "visualization": "latent_mse_seed_2030_rank_10_feature_2699_signed_delta_x16.png",
+          "discovery_activation_rate": 0.052503052503052504,
+          "discovery_mean_activation_when_active": 13.271025003388871
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/latent_mse/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "laplacian",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8278288887768257,
+      "evaluation_full_sae_mse": 0.6577578474835651,
+      "evaluation_top1_mse": 0.7874419561246546,
+      "evaluation_top5_mse": 0.7162334744523211,
+      "evaluation_top10_mse": 0.6709906345460473,
+      "top1_fraction_of_sae_improvement": 0.23747095534348034,
+      "top5_fraction_of_sae_improvement": 0.6561694070660506,
+      "top10_fraction_of_sae_improvement": 0.9221925910380924,
+      "mean_positive_direction_best_feature": 1891,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.6564880609512329,
+      "mean_positive_direction_feature_ablation_rank": 1,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 1891,
+          "mean_exact_ablation_loss_increase": 0.03110160847491288,
+          "mean_active_activation_in_examples": 15.195008277893066,
+          "evaluation_activation_rate": 0.08414634317159653,
+          "visualization": "laplacian_seed_2030_rank_01_feature_1891_signed_delta_x16.png",
+          "discovery_activation_rate": 0.10378510378510379,
+          "discovery_mean_activation_when_active": 13.088958086686976
+        },
+        {
+          "rank": 2,
+          "feature": 89,
+          "mean_exact_ablation_loss_increase": 0.020622504211823493,
+          "mean_active_activation_in_examples": 11.812378883361816,
+          "evaluation_activation_rate": 0.05609755963087082,
+          "visualization": "laplacian_seed_2030_rank_02_feature_89_signed_delta_x16.png",
+          "discovery_activation_rate": 0.08302808302808302,
+          "discovery_mean_activation_when_active": 11.794157966094858
+        },
+        {
+          "rank": 3,
+          "feature": 1065,
+          "mean_exact_ablation_loss_increase": 0.01922065543945565,
+          "mean_active_activation_in_examples": 11.000636100769043,
+          "evaluation_activation_rate": 0.06341463327407837,
+          "visualization": "laplacian_seed_2030_rank_03_feature_1065_signed_delta_x16.png",
+          "discovery_activation_rate": 0.09645909645909646,
+          "discovery_mean_activation_when_active": 10.950562052334412
+        },
+        {
+          "rank": 4,
+          "feature": 2252,
+          "mean_exact_ablation_loss_increase": 0.018983250915417412,
+          "mean_active_activation_in_examples": 12.673005104064941,
+          "evaluation_activation_rate": 0.07073170691728592,
+          "visualization": "laplacian_seed_2030_rank_04_feature_2252_signed_delta_x16.png",
+          "discovery_activation_rate": 0.08424908424908426,
+          "discovery_mean_activation_when_active": 11.797919665557751
+        },
+        {
+          "rank": 5,
+          "feature": 541,
+          "mean_exact_ablation_loss_increase": 0.017417792424159317,
+          "mean_active_activation_in_examples": 11.114701271057129,
+          "evaluation_activation_rate": 0.06707317382097244,
+          "visualization": "laplacian_seed_2030_rank_05_feature_541_signed_delta_x16.png",
+          "discovery_activation_rate": 0.06837606837606838,
+          "discovery_mean_activation_when_active": 11.709566944411822
+        },
+        {
+          "rank": 6,
+          "feature": 3942,
+          "mean_exact_ablation_loss_increase": 0.014603285345655977,
+          "mean_active_activation_in_examples": 8.770334243774414,
+          "evaluation_activation_rate": 0.05731707438826561,
+          "visualization": "laplacian_seed_2030_rank_06_feature_3942_signed_delta_x16.png",
+          "discovery_activation_rate": 0.07814407814407814,
+          "discovery_mean_activation_when_active": 8.610032395459712
+        },
+        {
+          "rank": 7,
+          "feature": 3524,
+          "mean_exact_ablation_loss_increase": 0.0144200927077,
+          "mean_active_activation_in_examples": 9.802286148071289,
+          "evaluation_activation_rate": 0.046341463923454285,
+          "visualization": "laplacian_seed_2030_rank_07_feature_3524_signed_delta_x16.png",
+          "discovery_activation_rate": 0.05616605616605617,
+          "discovery_mean_activation_when_active": 12.801790470014447
+        },
+        {
+          "rank": 8,
+          "feature": 553,
+          "mean_exact_ablation_loss_increase": 0.013008637461238183,
+          "mean_active_activation_in_examples": 10.617631912231445,
+          "evaluation_activation_rate": 0.06341463327407837,
+          "visualization": "laplacian_seed_2030_rank_08_feature_553_signed_delta_x16.png",
+          "discovery_activation_rate": 0.08547008547008547,
+          "discovery_mean_activation_when_active": 9.027646733181816
+        },
+        {
+          "rank": 9,
+          "feature": 2757,
+          "mean_exact_ablation_loss_increase": 0.005893119806435154,
+          "mean_active_activation_in_examples": 8.592967987060547,
+          "evaluation_activation_rate": 0.030487805604934692,
+          "visualization": "laplacian_seed_2030_rank_09_feature_2757_signed_delta_x16.png",
+          "discovery_activation_rate": 0.03785103785103785,
+          "discovery_mean_activation_when_active": 7.934416096056661
+        },
+        {
+          "rank": 10,
+          "feature": 3321,
+          "mean_exact_ablation_loss_increase": 0.00494287548134995,
+          "mean_active_activation_in_examples": 10.814221382141113,
+          "evaluation_activation_rate": 0.023170731961727142,
+          "visualization": "laplacian_seed_2030_rank_10_feature_3321_signed_delta_x16.png",
+          "discovery_activation_rate": 0.030525030525030524,
+          "discovery_mean_activation_when_active": 7.974535183906555
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/laplacian/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "fourier_bands",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8266836212902534,
+      "evaluation_full_sae_mse": 0.7022793141806998,
+      "evaluation_top1_mse": 0.7051045999294374,
+      "evaluation_top5_mse": 0.7024193833513958,
+      "evaluation_top10_mse": 0.7023718950225086,
+      "top1_fraction_of_sae_improvement": 0.9772894860766387,
+      "top5_fraction_of_sae_improvement": 0.9988740810189745,
+      "top10_fraction_of_sae_improvement": 0.9992558067806501,
+      "mean_positive_direction_best_feature": 2215,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.9245806336402893,
+      "mean_positive_direction_feature_ablation_rank": 1,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 2215,
+          "mean_exact_ablation_loss_increase": 0.1579770057556539,
+          "mean_active_activation_in_examples": 33.92649459838867,
+          "evaluation_activation_rate": 0.0890243873000145,
+          "visualization": "fourier_bands_seed_2030_rank_01_feature_2215_signed_delta_x16.png",
+          "discovery_activation_rate": 0.1111111111111111,
+          "discovery_mean_activation_when_active": 35.08890936924861
+        },
+        {
+          "rank": 2,
+          "feature": 1538,
+          "mean_exact_ablation_loss_increase": 0.0005741995862788624,
+          "mean_active_activation_in_examples": 1.4846750497817993,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_bands_seed_2030_rank_02_feature_1538_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 1.4846749305725098
+        },
+        {
+          "rank": 3,
+          "feature": 2393,
+          "mean_exact_ablation_loss_increase": 0.0001826073663930098,
+          "mean_active_activation_in_examples": 0.769971489906311,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_bands_seed_2030_rank_03_feature_2393_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.7699713706970215
+        },
+        {
+          "rank": 4,
+          "feature": 3729,
+          "mean_exact_ablation_loss_increase": 9.429458037225736e-05,
+          "mean_active_activation_in_examples": 0.5046931505203247,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_bands_seed_2030_rank_04_feature_3729_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.5046930313110352
+        },
+        {
+          "rank": 5,
+          "feature": 2758,
+          "mean_exact_ablation_loss_increase": 6.723412985189093e-05,
+          "mean_active_activation_in_examples": 0.4030265808105469,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_bands_seed_2030_rank_05_feature_2758_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.4030264616012573
+        },
+        {
+          "rank": 6,
+          "feature": 1284,
+          "mean_exact_ablation_loss_increase": 4.013726073834631e-05,
+          "mean_active_activation_in_examples": 0.2720976769924164,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_bands_seed_2030_rank_06_feature_1284_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.27209770679473877
+        },
+        {
+          "rank": 7,
+          "feature": 1414,
+          "mean_exact_ablation_loss_increase": 2.8973338404563468e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_bands_seed_2030_rank_07_feature_1414_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 5.021667003631592
+        },
+        {
+          "rank": 8,
+          "feature": 1419,
+          "mean_exact_ablation_loss_increase": 2.6551294748890822e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_bands_seed_2030_rank_08_feature_1419_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 3.6143617630004883
+        },
+        {
+          "rank": 9,
+          "feature": 1063,
+          "mean_exact_ablation_loss_increase": 2.1960785878556116e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_bands_seed_2030_rank_09_feature_1063_signed_delta_x16.png",
+          "discovery_activation_rate": 0.002442002442002442,
+          "discovery_mean_activation_when_active": 1.7082054615020752
+        },
+        {
+          "rank": 10,
+          "feature": 294,
+          "mean_exact_ablation_loss_increase": 1.6851045909964268e-05,
+          "mean_active_activation_in_examples": 1.3487622737884521,
+          "evaluation_activation_rate": 0.0012195121962577105,
+          "visualization": "fourier_bands_seed_2030_rank_10_feature_294_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 3.132617950439453
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/fourier_bands/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "fourier_low",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8302701880292195,
+      "evaluation_full_sae_mse": 0.8157573653430473,
+      "evaluation_top1_mse": 0.818685331577208,
+      "evaluation_top5_mse": 0.8158912100443025,
+      "evaluation_top10_mse": 0.8158880001161156,
+      "top1_fraction_of_sae_improvement": 0.7982497066576534,
+      "top5_fraction_of_sae_improvement": 0.9907774866303064,
+      "top10_fraction_of_sae_improvement": 0.990998665394516,
+      "mean_positive_direction_best_feature": 1453,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.37948596477508545,
+      "mean_positive_direction_feature_ablation_rank": 1,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 1453,
+          "mean_exact_ablation_loss_increase": 0.018066330335270137,
+          "mean_active_activation_in_examples": 7.822817802429199,
+          "evaluation_activation_rate": 0.08414634317159653,
+          "visualization": "fourier_low_seed_2030_rank_01_feature_1453_signed_delta_x16.png",
+          "discovery_activation_rate": 0.10012210012210013,
+          "discovery_mean_activation_when_active": 9.748029586018585
+        },
+        {
+          "rank": 2,
+          "feature": 1284,
+          "mean_exact_ablation_loss_increase": 0.0005632037710812357,
+          "mean_active_activation_in_examples": 1.3558982610702515,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_low_seed_2030_rank_02_feature_1284_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 1.355898380279541
+        },
+        {
+          "rank": 3,
+          "feature": 2239,
+          "mean_exact_ablation_loss_increase": 0.00037771561700436805,
+          "mean_active_activation_in_examples": 1.065597653388977,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_low_seed_2030_rank_03_feature_2239_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 1.0655977725982666
+        },
+        {
+          "rank": 4,
+          "feature": 716,
+          "mean_exact_ablation_loss_increase": 0.0002644102916949325,
+          "mean_active_activation_in_examples": 0.8549114465713501,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_low_seed_2030_rank_04_feature_716_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.8549113273620605
+        },
+        {
+          "rank": 5,
+          "feature": 3297,
+          "mean_exact_ablation_loss_increase": 1.4834274266083452e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_low_seed_2030_rank_05_feature_3297_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 2.6056957244873047
+        },
+        {
+          "rank": 6,
+          "feature": 3145,
+          "mean_exact_ablation_loss_increase": 1.3786478659481502e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_low_seed_2030_rank_06_feature_3145_signed_delta_x16.png",
+          "discovery_activation_rate": 0.002442002442002442,
+          "discovery_mean_activation_when_active": 1.3118202090263367
+        },
+        {
+          "rank": 7,
+          "feature": 3249,
+          "mean_exact_ablation_loss_increase": 1.1246408061812358e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_low_seed_2030_rank_07_feature_3249_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 2.169182538986206
+        },
+        {
+          "rank": 8,
+          "feature": 974,
+          "mean_exact_ablation_loss_increase": 1.1202207196763147e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_low_seed_2030_rank_08_feature_974_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 1.5178675651550293
+        },
+        {
+          "rank": 9,
+          "feature": 448,
+          "mean_exact_ablation_loss_increase": 1.0668089720210167e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_low_seed_2030_rank_09_feature_448_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 1.2677943706512451
+        },
+        {
+          "rank": 10,
+          "feature": 1409,
+          "mean_exact_ablation_loss_increase": 1.0154514786160764e-05,
+          "mean_active_activation_in_examples": 0.6862965822219849,
+          "evaluation_activation_rate": 0.0012195121962577105,
+          "visualization": "fourier_low_seed_2030_rank_10_feature_1409_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 1.6120365858078003
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/fourier_low/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "fourier_mid",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8288944174603718,
+      "evaluation_full_sae_mse": 0.8091072175560928,
+      "evaluation_top1_mse": 0.8116140319079888,
+      "evaluation_top5_mse": 0.8092040201512779,
+      "evaluation_top10_mse": 0.8091916735579328,
+      "top1_fraction_of_sae_improvement": 0.8733113141817594,
+      "top5_fraction_of_sae_improvement": 0.9951078173944086,
+      "top10_fraction_of_sae_improvement": 0.9957317860915903,
+      "mean_positive_direction_best_feature": 3395,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.48086708784103394,
+      "mean_positive_direction_feature_ablation_rank": 4,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 910,
+          "mean_exact_ablation_loss_increase": 0.009358675943480598,
+          "mean_active_activation_in_examples": 6.136886119842529,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_mid_seed_2030_rank_01_feature_910_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 6.1368865966796875
+        },
+        {
+          "rank": 2,
+          "feature": 1051,
+          "mean_exact_ablation_loss_increase": 0.0009664774148000611,
+          "mean_active_activation_in_examples": 1.7024803161621094,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_mid_seed_2030_rank_02_feature_1051_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 1.7024798393249512
+        },
+        {
+          "rank": 3,
+          "feature": 1998,
+          "mean_exact_ablation_loss_increase": 0.000166607399781545,
+          "mean_active_activation_in_examples": 0.5225100517272949,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_mid_seed_2030_rank_03_feature_1998_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.5225099325180054
+        },
+        {
+          "rank": 4,
+          "feature": 3395,
+          "mean_exact_ablation_loss_increase": 9.088598502178986e-05,
+          "mean_active_activation_in_examples": 0.32371172308921814,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_mid_seed_2030_rank_04_feature_3395_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.32371172308921814
+        },
+        {
+          "rank": 5,
+          "feature": 597,
+          "mean_exact_ablation_loss_increase": 8.934894706019097e-05,
+          "mean_active_activation_in_examples": 0.32238999009132385,
+          "evaluation_activation_rate": 0.9109756350517273,
+          "visualization": "fourier_mid_seed_2030_rank_05_feature_597_signed_delta_x16.png",
+          "discovery_activation_rate": 0.8888888888888888,
+          "discovery_mean_activation_when_active": 0.32238996028900146
+        },
+        {
+          "rank": 6,
+          "feature": 3204,
+          "mean_exact_ablation_loss_increase": 7.489712073985642e-05,
+          "mean_active_activation_in_examples": 0.6978363394737244,
+          "evaluation_activation_rate": 0.009756097570061684,
+          "visualization": "fourier_mid_seed_2030_rank_06_feature_3204_signed_delta_x16.png",
+          "discovery_activation_rate": 0.014652014652014652,
+          "discovery_mean_activation_when_active": 1.9754482060670853
+        },
+        {
+          "rank": 7,
+          "feature": 591,
+          "mean_exact_ablation_loss_increase": 1.2771710889898377e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_mid_seed_2030_rank_07_feature_591_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 1.9619998931884766
+        },
+        {
+          "rank": 8,
+          "feature": 4005,
+          "mean_exact_ablation_loss_increase": 1.187467895293556e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_mid_seed_2030_rank_08_feature_4005_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 2.7457942962646484
+        },
+        {
+          "rank": 9,
+          "feature": 737,
+          "mean_exact_ablation_loss_increase": 1.1382503685187799e-05,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_mid_seed_2030_rank_09_feature_737_signed_delta_x16.png",
+          "discovery_activation_rate": 0.002442002442002442,
+          "discovery_mean_activation_when_active": 1.1120637655258179
+        },
+        {
+          "rank": 10,
+          "feature": 2807,
+          "mean_exact_ablation_loss_increase": 8.970204517882094e-06,
+          "mean_active_activation_in_examples": 0.0,
+          "evaluation_activation_rate": 0.0,
+          "visualization": "fourier_mid_seed_2030_rank_10_feature_2807_signed_delta_x16.png",
+          "discovery_activation_rate": 0.001221001221001221,
+          "discovery_mean_activation_when_active": 1.5307750701904297
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/fourier_mid/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "sine_fixed",
+      "objective": "fourier_high",
+      "seed": 2030,
+      "evaluation_bias_only_mse": 0.8279225675071158,
+      "evaluation_full_sae_mse": 0.6101812455712295,
+      "evaluation_top1_mse": 0.8025634021293826,
+      "evaluation_top5_mse": 0.6948867704810165,
+      "evaluation_top10_mse": 0.6364774890062286,
+      "top1_fraction_of_sae_improvement": 0.1164646432393764,
+      "top5_fraction_of_sae_improvement": 0.6109809375790946,
+      "top10_fraction_of_sae_improvement": 0.8792317268894788,
+      "mean_positive_direction_best_feature": 1891,
+      "mean_positive_direction_best_abs_decoder_cosine": 0.5787382125854492,
+      "mean_positive_direction_feature_ablation_rank": 3,
+      "top_features": [
+        {
+          "rank": 1,
+          "feature": 3701,
+          "mean_exact_ablation_loss_increase": 0.02615040867766809,
+          "mean_active_activation_in_examples": 12.516701698303223,
+          "evaluation_activation_rate": 0.06707317382097244,
+          "visualization": "fourier_high_seed_2030_rank_01_feature_3701_signed_delta_x16.png",
+          "discovery_activation_rate": 0.08302808302808302,
+          "discovery_mean_activation_when_active": 15.053354342194165
+        },
+        {
+          "rank": 2,
+          "feature": 3524,
+          "mean_exact_ablation_loss_increase": 0.024546350194971384,
+          "mean_active_activation_in_examples": 13.745988845825195,
+          "evaluation_activation_rate": 0.059756096452474594,
+          "visualization": "fourier_high_seed_2030_rank_02_feature_3524_signed_delta_x16.png",
+          "discovery_activation_rate": 0.07081807081807082,
+          "discovery_mean_activation_when_active": 15.264450377431409
+        },
+        {
+          "rank": 3,
+          "feature": 1891,
+          "mean_exact_ablation_loss_increase": 0.02363913264640144,
+          "mean_active_activation_in_examples": 16.004528045654297,
+          "evaluation_activation_rate": 0.08048780262470245,
+          "visualization": "fourier_high_seed_2030_rank_03_feature_1891_signed_delta_x16.png",
+          "discovery_activation_rate": 0.0927960927960928,
+          "discovery_mean_activation_when_active": 14.75852034437029
+        },
+        {
+          "rank": 4,
+          "feature": 2551,
+          "mean_exact_ablation_loss_increase": 0.023008804021218975,
+          "mean_active_activation_in_examples": 12.946829795837402,
+          "evaluation_activation_rate": 0.07682926952838898,
+          "visualization": "fourier_high_seed_2030_rank_04_feature_2551_signed_delta_x16.png",
+          "discovery_activation_rate": 0.09523809523809523,
+          "discovery_mean_activation_when_active": 15.182808923224608
+        },
+        {
+          "rank": 5,
+          "feature": 2070,
+          "mean_exact_ablation_loss_increase": 0.020939281550878534,
+          "mean_active_activation_in_examples": 14.08508586883545,
+          "evaluation_activation_rate": 0.07804878056049347,
+          "visualization": "fourier_high_seed_2030_rank_05_feature_2070_signed_delta_x16.png",
+          "discovery_activation_rate": 0.10012210012210013,
+          "discovery_mean_activation_when_active": 12.142399354678828
+        },
+        {
+          "rank": 6,
+          "feature": 186,
+          "mean_exact_ablation_loss_increase": 0.019483812858831873,
+          "mean_active_activation_in_examples": 10.923439025878906,
+          "evaluation_activation_rate": 0.07073170691728592,
+          "visualization": "fourier_high_seed_2030_rank_06_feature_186_signed_delta_x16.png",
+          "discovery_activation_rate": 0.09523809523809523,
+          "discovery_mean_activation_when_active": 11.54782666800878
+        },
+        {
+          "rank": 7,
+          "feature": 1065,
+          "mean_exact_ablation_loss_increase": 0.01854897712121953,
+          "mean_active_activation_in_examples": 12.446349143981934,
+          "evaluation_activation_rate": 0.07560975849628448,
+          "visualization": "fourier_high_seed_2030_rank_07_feature_1065_signed_delta_x16.png",
+          "discovery_activation_rate": 0.10012210012210013,
+          "discovery_mean_activation_when_active": 11.960082843536284
+        },
+        {
+          "rank": 8,
+          "feature": 2007,
+          "mean_exact_ablation_loss_increase": 0.011687052461758747,
+          "mean_active_activation_in_examples": 12.414857864379883,
+          "evaluation_activation_rate": 0.04878048598766327,
+          "visualization": "fourier_high_seed_2030_rank_08_feature_2007_signed_delta_x16.png",
+          "discovery_activation_rate": 0.054945054945054944,
+          "discovery_mean_activation_when_active": 12.621527745988633
+        },
+        {
+          "rank": 9,
+          "feature": 2672,
+          "mean_exact_ablation_loss_increase": 0.008471296037239123,
+          "mean_active_activation_in_examples": 9.74194622039795,
+          "evaluation_activation_rate": 0.04512195289134979,
+          "visualization": "fourier_high_seed_2030_rank_09_feature_2672_signed_delta_x16.png",
+          "discovery_activation_rate": 0.054945054945054944,
+          "discovery_mean_activation_when_active": 12.494679503970676
+        },
+        {
+          "rank": 10,
+          "feature": 960,
+          "mean_exact_ablation_loss_increase": 0.007813220437143057,
+          "mean_active_activation_in_examples": 12.73838996887207,
+          "evaluation_activation_rate": 0.04024390131235123,
+          "visualization": "fourier_high_seed_2030_rank_10_feature_960_signed_delta_x16.png",
+          "discovery_activation_rate": 0.04395604395604396,
+          "discovery_mean_activation_when_active": 10.325208326180777
+        }
+      ],
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/sparse_planted_residual_suite/sine_high_a0p5/saes_pure/fourier_high/seed_2030/last.pt"
+    }
+  ]
+}

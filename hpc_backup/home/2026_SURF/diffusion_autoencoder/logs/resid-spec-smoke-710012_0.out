@@ -1,0 +1,52 @@
+{'gradient_calibration': {'method': 'fixed_initial_output_gradient_ratio', 'target_ratio': 0.1, 'examples': 32, 'mse_to_transformed_norm_ratio': {'median': 11.558806419372559, 'p05': 7.78421528339386, 'p95': 20.32571201324463}, 'transform_weight': 1.1558806419372558}}
+{'step': 1, 'loss': 0.11374417692422867, 'latent_mse': 0.102089524269104, 'transformed_loss': 0.0013615660136565566, 'pixel_mse': 0.003660507733002305, 'transform_weight': 1.1558806419372558, 'gradient_norm_before_clip': 0.010109045542776585, 'used_features': 63, 'rescued': 0, 'elapsed_seconds': 0.8375365734100342}
+{'validation': {'base_mse': 0.4986301445975545, 'latent_mse': 0.49023621223407815, 'transformed_loss': 0.005268652485302849, 'pixel_mse': 0.017632547140921523, 'step': 1, 'valid_ev': 0.5132461926829395, 'mse_ratio_to_base': 0.9831660150225151, 'feasible': True, 'elapsed_seconds': 10.975207090377808}}
+{
+  "base_mse": 0.4986301445975545,
+  "latent_mse": 0.49023621223407815,
+  "transformed_loss": 0.005268652485302849,
+  "pixel_mse": 0.017632547140921523,
+  "objective": "laplacian",
+  "steps": 1,
+  "transform_weight": 1.1558806419372558,
+  "best_feasible_transformed_loss": 0.005268652485302849,
+  "best_valid_ev": 0.5132461926829395,
+  "valid_ev": 0.5132461926829395,
+  "mse_ratio_to_base": 0.9831660150225151,
+  "used_features": 63,
+  "gradient_calibration": {
+    "method": "fixed_initial_output_gradient_ratio",
+    "target_ratio": 0.1,
+    "examples": 32,
+    "mse_to_transformed_norm_ratio": {
+      "median": 11.558806419372559,
+      "p05": 7.78421528339386,
+      "p95": 20.32571201324463
+    },
+    "transform_weight": 1.1558806419372558
+  },
+  "config": {
+    "objective": "laplacian",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "autoencoder": "results/spatial_conv_ae/last.pt",
+    "base_sae": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_bookkeeping_v1/original_16k_k64_seed2026/last.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/spatial_residual_specialists_v1_smoke/laplacian",
+    "feature_count": 2048,
+    "k": 8,
+    "steps": 1,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "lr_warmup": 1,
+    "lambda_warmup": 1,
+    "gradient_target_ratio": 0.1,
+    "calibration_examples": 32,
+    "mse_tolerance": 0.02,
+    "aux_coeff": 0.1,
+    "grad_clip": 1.0,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue": 64,
+    "validate_every": 1,
+    "seed": 2026
+  }
+}

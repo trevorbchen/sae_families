@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "purpose": "Causal visual labeling of DiffAE semantic SAE feature interventions",
+  "model": "moonshotai/Kimi-VL-A3B-Instruct",
+  "base_checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/checkpoints/ffhq128_autoenc/last.ckpt",
+  "codes": "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/checkpoints/ffhq128_autoenc/latent.pkl",
+  "variants": [
+    {"name": "8x_k16", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/8x_k16/last.pt"},
+    {"name": "16x_k16", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_variants/16x_k16/last.pt"},
+    {"name": "16x_k32", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/small_16x_k32_aux_reinit_merged/last.pt"},
+    {"name": "32x_k32", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/final_32x_k32_aux_reinit_merged/last.pt"},
+    {"name": "32x_k64", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/final_32x_k64_aux_reinit_merged/last.pt"},
+    {"name": "32x_k128", "kind": "topk", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/final_32x_k128_aux_reinit_merged/last.pt"},
+    {"name": "polynomial_32x_k64", "kind": "polynomial", "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/zsem_sae/polynomial_32x_k64_aux_reinit_merged/last.pt"}
+  ],
+  "intervention": {
+    "multipliers": [-2, 0, 2],
+    "examples_per_feature": 3,
+    "selection": "top features by FFHQ activation mass; examples with highest FFHQ pre-TopK response",
+    "inactive_features": "force into the intervention support while preserving the model's native sparse support",
+    "diffae_steps": 20,
+    "seed_policy": "fixed per feature and example"
+  },
+  "record": {
+    "variant": "string",
+    "feature_id": "integer",
+    "examples": "array",
+    "primary_effect": "string",
+    "region": "string",
+    "direction": "string",
+    "secondary_effects": "array[string]",
+    "identity_preserved": "boolean_or_null",
+    "artifact_level": "number_0_to_1_or_null",
+    "confidence": "number_0_to_1",
+    "evidence": "string",
+    "disagreement_flags": "array[string]",
+    "adjudication": "string"
+  }
+}

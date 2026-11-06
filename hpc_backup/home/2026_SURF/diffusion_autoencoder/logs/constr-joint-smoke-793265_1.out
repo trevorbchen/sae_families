@@ -1,0 +1,89 @@
+{'step': 1, 'phase': 'mse_adaptation', 'latent_mse': 0.12036854028701782, 'aux_mse': 0.12626861035823822, 'gradient_norm': 0.24628162384033203, 'transform_gradient_ratio': 0.0, 'effective_ratio_cap': 0.1, 'gradient_diagnostics': {}, 'rollback_count': 0, 'elapsed_seconds': 0.25525522232055664}
+{'validation': {'step': 5, 'valid_mse': 0.49812407592508107, 'valid_ev': 0.5054143606244779, 'trust_baseline_mse': 0.49812407592508107, 'trust_limit_mse': 0.5031053166843319, 'accepted': True, 'accepted_step_after_check': 5, 'rollback_count': 0, 'effective_ratio_cap': 0.1}}
+{'validation': {'step': 10, 'valid_mse': 0.4973134195899149, 'valid_ev': 0.5062192584425513, 'trust_baseline_mse': 0.49812407592508107, 'trust_limit_mse': 0.5031053166843319, 'accepted': True, 'accepted_step_after_check': 10, 'rollback_count': 0, 'effective_ratio_cap': 0.1}}
+{'validation': {'step': 15, 'valid_mse': 0.4964442497495473, 'valid_ev': 0.5070822541137117, 'trust_baseline_mse': 0.49812407592508107, 'trust_limit_mse': 0.5031053166843319, 'accepted': True, 'accepted_step_after_check': 15, 'rollback_count': 0, 'effective_ratio_cap': 0.1}}
+{'validation': {'step': 20, 'valid_mse': 0.4957055398209056, 'valid_ev': 0.5078157165983181, 'trust_baseline_mse': 0.49812407592508107, 'trust_limit_mse': 0.5031053166843319, 'accepted': True, 'accepted_step_after_check': 20, 'rollback_count': 0, 'effective_ratio_cap': 0.1}}
+{
+  "objectives": [
+    "laplacian",
+    "fourier_low",
+    "fourier_mid",
+    "fourier_high"
+  ],
+  "groups": [
+    {
+      "name": "mse",
+      "objective": "latent_mse",
+      "size": 8192,
+      "k": 32
+    },
+    {
+      "name": "laplacian",
+      "objective": "laplacian",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_low",
+      "objective": "fourier_low",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_mid",
+      "objective": "fourier_mid",
+      "size": 2048,
+      "k": 8
+    },
+    {
+      "name": "fourier_high",
+      "objective": "fourier_high",
+      "size": 2048,
+      "k": 8
+    }
+  ],
+  "total_dictionary": 16384,
+  "total_k": 64,
+  "trust_baseline_mse": 0.49812407592508107,
+  "trust_limit_mse": 0.5031053166843319,
+  "final_geometry": {
+    "latent_mse": 0.4957055398209056,
+    "pixel_mse": 0.017940329984421407,
+    "transformed": {
+      "laplacian": 0.005086981599935677,
+      "fourier_low": 3.7530900502510374,
+      "fourier_mid": 0.30737256072802543,
+      "fourier_high": 0.006293680366580991
+    }
+  },
+  "final_valid_ev": 0.5078157165983181,
+  "best_normalized_objective_score": 0.9945133272981964,
+  "rollback_count": 0,
+  "final_effective_ratio_cap": 0.1,
+  "used_features": 5022,
+  "config": {
+    "objectives": [
+      "laplacian",
+      "fourier_low",
+      "fourier_mid",
+      "fourier_high"
+    ],
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "autoencoder": "results/spatial_conv_ae/last.pt",
+    "initial_sae": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_bookkeeping_v1/original_16k_k64_seed2026/best_valid.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/constrained_joint_changed_objectives_smoke/task_1",
+    "steps": 20,
+    "mse_adapt_steps": 5,
+    "batch_size": 8,
+    "lr": 0.0001,
+    "lr_warmup": 2,
+    "transform_warmup": 2,
+    "transform_gradient_ratio": 0.1,
+    "mse_tolerance": 0.01,
+    "aux_coeff": 0.1,
+    "grad_clip": 1.0,
+    "trust_every": 5,
+    "geometry_every": 10,
+    "seed": 2026
+  }
+}

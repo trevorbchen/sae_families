@@ -1,0 +1,197 @@
+processed=8/512 elapsed=3.0s
+processed=16/512 elapsed=5.8s
+processed=24/512 elapsed=8.5s
+processed=32/512 elapsed=11.2s
+processed=40/512 elapsed=13.9s
+processed=48/512 elapsed=16.6s
+processed=56/512 elapsed=19.3s
+processed=64/512 elapsed=22.0s
+processed=72/512 elapsed=24.7s
+processed=80/512 elapsed=27.5s
+processed=88/512 elapsed=30.2s
+processed=96/512 elapsed=32.9s
+processed=104/512 elapsed=35.6s
+processed=112/512 elapsed=38.3s
+processed=120/512 elapsed=41.0s
+processed=128/512 elapsed=43.7s
+processed=136/512 elapsed=46.4s
+processed=144/512 elapsed=49.1s
+processed=152/512 elapsed=51.9s
+processed=160/512 elapsed=54.6s
+processed=168/512 elapsed=57.3s
+processed=176/512 elapsed=60.0s
+processed=184/512 elapsed=62.7s
+processed=192/512 elapsed=65.4s
+processed=200/512 elapsed=68.1s
+processed=208/512 elapsed=70.8s
+processed=216/512 elapsed=73.5s
+processed=224/512 elapsed=76.3s
+processed=232/512 elapsed=79.0s
+processed=240/512 elapsed=81.7s
+processed=248/512 elapsed=84.4s
+processed=256/512 elapsed=87.1s
+processed=264/512 elapsed=89.8s
+processed=272/512 elapsed=92.5s
+processed=280/512 elapsed=95.2s
+processed=288/512 elapsed=98.0s
+processed=296/512 elapsed=100.7s
+processed=304/512 elapsed=103.4s
+processed=312/512 elapsed=106.1s
+processed=320/512 elapsed=108.8s
+processed=328/512 elapsed=111.5s
+processed=336/512 elapsed=114.2s
+processed=344/512 elapsed=116.9s
+processed=352/512 elapsed=119.6s
+processed=360/512 elapsed=122.4s
+processed=368/512 elapsed=125.1s
+processed=376/512 elapsed=127.8s
+processed=384/512 elapsed=130.5s
+processed=392/512 elapsed=133.2s
+processed=400/512 elapsed=135.9s
+processed=408/512 elapsed=138.6s
+processed=416/512 elapsed=141.3s
+processed=424/512 elapsed=144.1s
+processed=432/512 elapsed=146.8s
+processed=440/512 elapsed=149.5s
+processed=448/512 elapsed=152.2s
+processed=456/512 elapsed=154.9s
+processed=464/512 elapsed=157.6s
+processed=472/512 elapsed=160.3s
+processed=480/512 elapsed=163.0s
+processed=488/512 elapsed=165.7s
+processed=496/512 elapsed=168.5s
+processed=504/512 elapsed=171.2s
+processed=512/512 elapsed=173.9s
+{
+  "metric": "argmin_t ||eps_theta(x_true_t, candidate_t)||_2",
+  "num_images": 512,
+  "candidate_step": 10,
+  "candidates": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    250,
+    260,
+    270,
+    280,
+    290,
+    300,
+    310,
+    320,
+    330,
+    340,
+    350,
+    360,
+    370,
+    380,
+    390,
+    400,
+    410,
+    420,
+    430,
+    440,
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650,
+    660,
+    670,
+    680,
+    690,
+    700,
+    710,
+    720,
+    730,
+    740,
+    750,
+    760,
+    770,
+    780,
+    790,
+    800,
+    810,
+    820,
+    830,
+    840,
+    850,
+    860,
+    870,
+    880,
+    890,
+    900,
+    910,
+    920,
+    930,
+    940,
+    950,
+    960,
+    970,
+    980,
+    990,
+    999
+  ],
+  "mean_abs_error": 328.54296875,
+  "median_abs_error": 355.0,
+  "rmse": 375.1346130371094,
+  "max_abs_error": 764,
+  "mean_candidate_rounding_error": 2.443359375,
+  "mean_excess_over_candidate_rounding": 326.099609375,
+  "within_10": 0.02734375,
+  "within_25": 0.046875,
+  "within_50": 0.0859375,
+  "within_100": 0.169921875,
+  "config": {
+    "ckpt": "runs/dit_s2_cifar10/last.pt",
+    "data_dir": "data",
+    "out_dir": "runs/timestep_eps_norm_curve_eval",
+    "num_images": 512,
+    "batch_size": 8,
+    "num_workers": 8,
+    "timesteps": 1000,
+    "candidate_step": 10,
+    "extra_candidates": [
+      999
+    ],
+    "precision": "bf16",
+    "seed": 2026
+  }
+}

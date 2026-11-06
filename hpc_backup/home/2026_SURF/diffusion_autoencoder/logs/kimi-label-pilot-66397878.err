@@ -1,0 +1,23 @@
+[rank: 0] Global seed set to 0
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:06<00:39,  6.59s/it]Loading checkpoint shards:  29%|██▊       | 2/7 [00:13<00:34,  6.82s/it]Loading checkpoint shards:  43%|████▎     | 3/7 [00:19<00:25,  6.40s/it]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:26<00:20,  6.74s/it]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:32<00:12,  6.41s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:38<00:06,  6.30s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:43<00:00,  5.69s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:43<00:00,  6.16s/it]
+Encountered exception while importing tiktoken: No module named 'tiktoken'
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/label_features_kimi.py", line 203, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/label_features_kimi.py", line 158, in main
+    processor = AutoProcessor.from_pretrained(args.model, trust_remote_code=True)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/models/auto/processing_auto.py", line 328, in from_pretrained
+    return processor_class.from_pretrained(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/processing_utils.py", line 974, in from_pretrained
+    args = cls._get_arguments_from_pretrained(pretrained_model_name_or_path, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/processing_utils.py", line 1020, in _get_arguments_from_pretrained
+    args.append(attribute_class.from_pretrained(pretrained_model_name_or_path, **kwargs))
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 915, in from_pretrained
+    tokenizer_class = get_class_from_dynamic_module(class_ref, pretrained_model_name_or_path, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 541, in get_class_from_dynamic_module
+    final_module = get_cached_module_file(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 366, in get_cached_module_file
+    modules_needed = check_imports(resolved_module_file)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/transformers/dynamic_module_utils.py", line 198, in check_imports
+    raise ImportError(
+ImportError: This modeling file requires the following packages that were not found in your environment: tiktoken. Run `pip install tiktoken`

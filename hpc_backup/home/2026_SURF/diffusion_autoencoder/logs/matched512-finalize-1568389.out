@@ -1,0 +1,22 @@
+{
+  "selected_lambda": 0.1,
+  "selected": {
+    "lambda": 0.1,
+    "control_mean_ev": 0.3123664820715949,
+    "specialist_mean_ev": 0.3090249728883548,
+    "mean_ev_drop_pp": 0.334150918324011,
+    "worst_objective_ev_drop_pp": 0.6989390627396619,
+    "edited_output_alignment_gain": -0.00838314827280931,
+    "causal_delta_alignment_gain": -0.04136224336930182,
+    "pairwise_diagonal_focus": 0.003796910494565963,
+    "reconstruction_feasible": true,
+    "geometry_rank_score": 0.75,
+    "diagonal_focus_rank_score": 0.0,
+    "selection_score": 0.375
+  },
+  "selection_rule": {
+    "reconstruction_constraint": "mean EV drop <= 2.0 pp and every objective EV drop <= 3.0 pp",
+    "within_feasible_set": "equal-weight mean of rank-normalized causal-delta alignment gain and cross-seed diagonal-focus gap",
+    "off_diagonal_control": "different objective and different seed only"
+  }
+}

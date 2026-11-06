@@ -1,0 +1,391 @@
+{
+  "method": {
+    "space": "translation-shared spatial-AE channel atoms",
+    "architecture": "conv",
+    "objectives": [
+      "latent_mse",
+      "laplacian",
+      "fourier_bands",
+      "fourier_low",
+      "fourier_mid",
+      "fourier_high"
+    ],
+    "seeds": [
+      2030,
+      2031,
+      2032
+    ],
+    "validation_examples": 1639,
+    "matching_examples": 819,
+    "evaluation_examples": 820,
+    "top_features": 100,
+    "min_active_examples": 10,
+    "primary_threshold": 0.7,
+    "conv_activation_pooling": "max_over_spatial_positions",
+    "activation_matching": "first half; correlation evaluated on second half"
+  },
+  "vocabularies": {
+    "latent_mse_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 124,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/latent_mse/last.pt"
+    },
+    "latent_mse_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 124,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/latent_mse/seed_2031/last.pt"
+    },
+    "latent_mse_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 125,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/latent_mse/seed_2032/last.pt"
+    },
+    "laplacian_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 1055,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/laplacian/last.pt"
+    },
+    "laplacian_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 866,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/laplacian/seed_2031/last.pt"
+    },
+    "laplacian_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 927,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/laplacian/seed_2032/last.pt"
+    },
+    "fourier_bands_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 203,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/fourier_bands/last.pt"
+    },
+    "fourier_bands_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 238,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_bands/seed_2031/last.pt"
+    },
+    "fourier_bands_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 290,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_bands/seed_2032/last.pt"
+    },
+    "fourier_low_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 2885,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/fourier_low/last.pt"
+    },
+    "fourier_low_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 3007,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_low/seed_2031/last.pt"
+    },
+    "fourier_low_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 3292,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_low/seed_2032/last.pt"
+    },
+    "fourier_mid_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 180,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/fourier_mid/last.pt"
+    },
+    "fourier_mid_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 180,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_mid/seed_2031/last.pt"
+    },
+    "fourier_mid_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 188,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_mid/seed_2032/last.pt"
+    },
+    "fourier_high_seed_2030": {
+      "selected_features": 100,
+      "eligible_features": 495,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_saes/conv/fourier_high/last.pt"
+    },
+    "fourier_high_seed_2031": {
+      "selected_features": 100,
+      "eligible_features": 610,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_high/seed_2031/last.pt"
+    },
+    "fourier_high_seed_2032": {
+      "selected_features": 100,
+      "eligible_features": 536,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/conv/fourier_high/seed_2032/last.pt"
+    }
+  },
+  "primary_threshold_rows": [
+    {
+      "objective": "latent_mse",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 124,
+      "within_mean_maxcos_reappearance_probability": 0.1850000023841858,
+      "within_fraction_reappears_all_maxcos": 0.07999999821186066,
+      "within_mean_hungarian_reappearance_probability": 0.1550000011920929,
+      "within_fraction_reappears_all_hungarian": 0.05999999865889549,
+      "cross_mean_maxcos_match_probability": 0.07133333384990692,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 2,
+      "within_all_cross_none_hungarian": 6
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 124,
+      "within_mean_maxcos_reappearance_probability": 0.2199999988079071,
+      "within_fraction_reappears_all_maxcos": 0.11999999731779099,
+      "within_mean_hungarian_reappearance_probability": 0.19999998807907104,
+      "within_fraction_reappears_all_hungarian": 0.09999999403953552,
+      "cross_mean_maxcos_match_probability": 0.07533333450555801,
+      "cross_mean_hungarian_match_probability": 0.0026666666381061077,
+      "within_all_cross_none_maxcos": 4,
+      "within_all_cross_none_hungarian": 10
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 125,
+      "within_mean_maxcos_reappearance_probability": 0.16499999165534973,
+      "within_fraction_reappears_all_maxcos": 0.05999999865889549,
+      "within_mean_hungarian_reappearance_probability": 0.1550000011920929,
+      "within_fraction_reappears_all_hungarian": 0.03999999910593033,
+      "cross_mean_maxcos_match_probability": 0.06799999624490738,
+      "cross_mean_hungarian_match_probability": 0.005333333276212215,
+      "within_all_cross_none_maxcos": 2,
+      "within_all_cross_none_hungarian": 4
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 1055,
+      "within_mean_maxcos_reappearance_probability": 0.06499999761581421,
+      "within_fraction_reappears_all_maxcos": 0.03999999910593033,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.06333333253860474,
+      "cross_mean_hungarian_match_probability": 0.006000000052154064,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 866,
+      "within_mean_maxcos_reappearance_probability": 0.07999999821186066,
+      "within_fraction_reappears_all_maxcos": 0.03999999910593033,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.07333333045244217,
+      "cross_mean_hungarian_match_probability": 0.006000000052154064,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 927,
+      "within_mean_maxcos_reappearance_probability": 0.08999999612569809,
+      "within_fraction_reappears_all_maxcos": 0.07000000029802322,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.07733333110809326,
+      "cross_mean_hungarian_match_probability": 0.006000000052154064,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_bands",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 203,
+      "within_mean_maxcos_reappearance_probability": 0.10999999940395355,
+      "within_fraction_reappears_all_maxcos": 0.03999999910593033,
+      "within_mean_hungarian_reappearance_probability": 0.009999999776482582,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.08799999952316284,
+      "cross_mean_hungarian_match_probability": 0.009999999776482582,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_bands",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 238,
+      "within_mean_maxcos_reappearance_probability": 0.10999999940395355,
+      "within_fraction_reappears_all_maxcos": 0.05999999865889549,
+      "within_mean_hungarian_reappearance_probability": 0.009999999776482582,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.07733333110809326,
+      "cross_mean_hungarian_match_probability": 0.007999999448657036,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_bands",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 290,
+      "within_mean_maxcos_reappearance_probability": 0.11999999731779099,
+      "within_fraction_reappears_all_maxcos": 0.03999999910593033,
+      "within_mean_hungarian_reappearance_probability": 0.019999999552965164,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.07066666334867477,
+      "cross_mean_hungarian_match_probability": 0.009333333000540733,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_low",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 2885,
+      "within_mean_maxcos_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_maxcos": 0.0,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0006666666595265269,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_low",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 3007,
+      "within_mean_maxcos_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_maxcos": 0.0,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.005333333276212215,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_low",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 3292,
+      "within_mean_maxcos_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_maxcos": 0.0,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.007999999448657036,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_mid",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 180,
+      "within_mean_maxcos_reappearance_probability": 0.13499999046325684,
+      "within_fraction_reappears_all_maxcos": 0.09999999403953552,
+      "within_mean_hungarian_reappearance_probability": 0.03500000014901161,
+      "within_fraction_reappears_all_hungarian": 0.019999999552965164,
+      "cross_mean_maxcos_match_probability": 0.06933332979679108,
+      "cross_mean_hungarian_match_probability": 0.005333333276212215,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_mid",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 180,
+      "within_mean_maxcos_reappearance_probability": 0.10499999672174454,
+      "within_fraction_reappears_all_maxcos": 0.07999999821186066,
+      "within_mean_hungarian_reappearance_probability": 0.054999999701976776,
+      "within_fraction_reappears_all_hungarian": 0.019999999552965164,
+      "cross_mean_maxcos_match_probability": 0.06266666948795319,
+      "cross_mean_hungarian_match_probability": 0.012000000104308128,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_mid",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 188,
+      "within_mean_maxcos_reappearance_probability": 0.11999999731779099,
+      "within_fraction_reappears_all_maxcos": 0.07999999821186066,
+      "within_mean_hungarian_reappearance_probability": 0.03999999910593033,
+      "within_fraction_reappears_all_hungarian": 0.019999999552965164,
+      "cross_mean_maxcos_match_probability": 0.06333333253860474,
+      "cross_mean_hungarian_match_probability": 0.003999999724328518,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 2
+    },
+    {
+      "objective": "fourier_high",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 495,
+      "within_mean_maxcos_reappearance_probability": 0.0949999988079071,
+      "within_fraction_reappears_all_maxcos": 0.05999999865889549,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.08666666597127914,
+      "cross_mean_hungarian_match_probability": 0.007999999448657036,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_high",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 610,
+      "within_mean_maxcos_reappearance_probability": 0.08500000089406967,
+      "within_fraction_reappears_all_maxcos": 0.05999999865889549,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.07199999690055847,
+      "cross_mean_hungarian_match_probability": 0.006000000052154064,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "fourier_high",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 100,
+      "eligible_features": 536,
+      "within_mean_maxcos_reappearance_probability": 0.10499999672174454,
+      "within_fraction_reappears_all_maxcos": 0.07999999821186066,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.06399999558925629,
+      "cross_mean_hungarian_match_probability": 0.004666666500270367,
+      "within_all_cross_none_maxcos": 0,
+      "within_all_cross_none_hungarian": 0
+    }
+  ]
+}

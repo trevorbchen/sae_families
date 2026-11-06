@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --job-name=sae-book-v2-smoke
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:nvidia_l40s:1
+#SBATCH --array=0-2%3
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=64G
+#SBATCH --time=00:30:00
+#SBATCH --output=logs/sae-book-v2-smoke-%A_%a.out
+#SBATCH --error=logs/sae-book-v2-smoke-%A_%a.err
+set -euo pipefail
+
+MODES=(regular grouped grouped_pure)
+NAMES=(original proper_loss transformed_loss)
+MODE="${MODES[$SLURM_ARRAY_TASK_ID]}"
+NAME="${NAMES[$SLURM_ARRAY_TASK_ID]}"
+ROOT="/home/tbchen/2026 SURF/diffusion_autoencoder"
+PY="/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/bin/python"
+OUT="/resnick/scratch/tbchen/surf_2026/grouped_objective_sae_bookkeeping_v2_smoke/$NAME"
+cd "$ROOT"
+mkdir -p logs "$OUT"
+
+exec "$PY" train_grouped_objective_sae.py \
+  --mode "$MODE" --repo official_diffae \
+  --checkpoint official_diffae/checkpoints/ffhq128_autoenc/last.ckpt \
+  --data /resnick/scratch/tbchen/surf_2026/zsem_transformed/ffhq_16384.pt \
+  --out-dir "$OUT" --steps 1 --batch-size 4 \
+  --lr 3e-4 --warmup 1 --grad-clip 1.0 --transform-weight 1.0 \
+  --calibration-examples 40 --aux-coeff 0.1 \
+  --reinit-every 1000 --dead-after 3000 --max-rescue-per-group 4 \
+  --validate-every 1 --checkpoint-every 1 --state-every 1 \
+  --trace-flush-every 1 --skip-file-hashes \
+  --seed 2026 --split-seed 2026

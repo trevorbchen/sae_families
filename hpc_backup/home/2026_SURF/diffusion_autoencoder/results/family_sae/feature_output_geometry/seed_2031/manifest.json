@@ -1,0 +1,58 @@
+{
+  "method": {
+    "feature_selection": "training-split activation-mass rank",
+    "evaluation": "highest-activation held-out examples per feature",
+    "intervention": "original latent plus selected decoder-atom coefficient delta",
+    "multipliers": [
+      -2.0,
+      2.0
+    ],
+    "top_features": 500,
+    "examples_per_feature": 8,
+    "minimum_held_out_examples": 4,
+    "laplacian": "squared 4-neighbor discrete Laplacian / image squared energy",
+    "fourier": "low [1,4), mid [4,16), high [16,inf) fractions of non-DC power"
+  },
+  "models": [
+    {
+      "objective": "latent_mse",
+      "seed": 2031,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_seed_replicates/flat/latent_mse/seed_2031/last.pt",
+      "feature_count": 4096,
+      "k": 32,
+      "eligible_features": 279
+    },
+    {
+      "objective": "weighted_laplacian",
+      "seed": 2031,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_weighted_seed_replicates/flat/weighted_laplacian/seed_2031/last.pt",
+      "feature_count": 4096,
+      "k": 32,
+      "eligible_features": 92
+    },
+    {
+      "objective": "weighted_fourier_low",
+      "seed": 2031,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_weighted_seed_replicates/flat/weighted_fourier_low/seed_2031/last.pt",
+      "feature_count": 4096,
+      "k": 32,
+      "eligible_features": 450
+    },
+    {
+      "objective": "weighted_fourier_mid",
+      "seed": 2031,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_weighted_seed_replicates/flat/weighted_fourier_mid/seed_2031/last.pt",
+      "feature_count": 4096,
+      "k": 32,
+      "eligible_features": 405
+    },
+    {
+      "objective": "weighted_fourier_high",
+      "seed": 2031,
+      "checkpoint": "/home/tbchen/2026 SURF/diffusion_autoencoder/results/spatial_map_sae_weighted_seed_replicates/flat/weighted_fourier_high/seed_2031/last.pt",
+      "feature_count": 4096,
+      "k": 32,
+      "eligible_features": 147
+    }
+  ]
+}

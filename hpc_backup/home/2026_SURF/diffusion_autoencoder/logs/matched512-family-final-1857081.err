@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_matched_512_family.py", line 125, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_matched_512_family.py", line 88, in main
+    write_csv(args.out_dir / "family_reconstruction_overview.csv", controls + rows)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/summarize_matched_512_family.py", line 39, in write_csv
+    writer.writerows(rows)
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/csv.py", line 157, in writerows
+    return self.writer.writerows(map(self._dict_to_list, rowdicts))
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'objective_label'

@@ -1,0 +1,49 @@
+[rank: 0] Global seed set to 0
+/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py:306: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.conf.fp16):
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/train_zsem_transformed_sae.py", line 523, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/train_zsem_transformed_sae.py", line 360, in main
+    reconstructed_prediction = lit.sampler.p_mean_variance(
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/diffusion.py", line 96, in p_mean_variance
+    return super().p_mean_variance(self._wrap_model(model), *args,
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 307, in p_mean_variance
+    model_forward = model.forward(x=x,
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/diffusion.py", line 153, in forward
+    return self.model(x=x, t=do(t), t_cond=t_cond, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/unet_autoenc.py", line 241, in forward
+    h = self.output_blocks[k](h,
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/blocks.py", line 39, in forward
+    x = layer(x, emb=emb, cond=cond, lateral=lateral)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/blocks.py", line 193, in forward
+    return torch_checkpoint(self._forward, (x, emb, cond, lateral),
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/nn.py", line 137, in torch_checkpoint
+    return func(*args)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/blocks.py", line 220, in _forward
+    h = self.in_layers(x)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 240, in forward
+    input = module(input)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/model/nn.py", line 25, in forward
+    return super().forward(x.float()).type(x.dtype)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 256.00 MiB. GPU 0 has a total capacity of 15.77 GiB of which 38.25 MiB is free. Including non-PyTorch memory, this process has 15.72 GiB memory in use. Of the allocated memory 14.98 GiB is allocated by PyTorch, and 378.27 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

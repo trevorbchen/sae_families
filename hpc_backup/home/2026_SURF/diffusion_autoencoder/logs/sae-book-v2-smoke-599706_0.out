@@ -1,0 +1,102 @@
+{'validation': {'step': 1, 'valid_mse': 1.0959847207619258, 'valid_ev': -0.09467545957271617, 'elapsed_seconds': 0.3393266201019287, 'clip_count': 1, 'clip_fraction': 1.0, 'longest_clip_streak': 1}}
+{'step': 1, 'training_objective_mean': 1.2691185474395752, 'latent_mse': 1.0189127922058105, 'pixel_mse': None, 'aux_mse': 2.502056837081909, 'gradient_norm_before_clip': 1.5418330430984497, 'clipped': True, 'clip_count': 1, 'clip_fraction': 1.0, 'longest_clip_streak': 1, 'dominant_gradient_group': 'mse', 'cancellation_ratio': 1.0, 'active_by_group': {'mse': 64.0}, 'used_by_group': {'mse': 255}, 'rescued': {}}
+{
+  "mode": "regular",
+  "examples": 16384,
+  "train_examples": 14745,
+  "valid_examples": 1639,
+  "input_dim": 512,
+  "dict_size": 16384,
+  "total_k": 64,
+  "groups": [
+    {
+      "name": "mse",
+      "objective": "latent_mse",
+      "size": 16384,
+      "k": 64
+    }
+  ],
+  "valid_mse": 1.0959847207619258,
+  "valid_ev": -0.09467545957271617,
+  "valid_variance": 1.001196026802063,
+  "valid_used_by_group": {
+    "mse": 16185
+  },
+  "rescued_by_group": {
+    "mse": 0
+  },
+  "clip_summary": {
+    "count": 1,
+    "fraction": 1.0,
+    "longest_streak": 1,
+    "dominant_group_counts": {
+      "mse": 1
+    },
+    "gradient_norm_median": 1.5418330430984497,
+    "gradient_norm_p95": 1.5418330430984497,
+    "gradient_norm_max": 1.5418330430984497
+  },
+  "validation_history": [
+    {
+      "step": 1,
+      "valid_mse": 1.0959847207619258,
+      "valid_ev": -0.09467545957271617,
+      "elapsed_seconds": 0.3393266201019287,
+      "clip_count": 1,
+      "clip_fraction": 1.0,
+      "longest_clip_streak": 1
+    }
+  ],
+  "best_valid_ev": -0.09467545957271617,
+  "component_powers": {},
+  "power_counts": {},
+  "fixed_decoder_bias": true,
+  "config": {
+    "mode": "regular",
+    "repo": "official_diffae",
+    "checkpoint": "official_diffae/checkpoints/ffhq128_autoenc/last.ckpt",
+    "data": "/resnick/scratch/tbchen/surf_2026/zsem_transformed/ffhq_16384.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/grouped_objective_sae_bookkeeping_v2_smoke/original",
+    "steps": 1,
+    "batch_size": 4,
+    "lr": 0.0003,
+    "warmup": 1,
+    "grad_clip": 1.0,
+    "transform_weight": 1.0,
+    "calibration_examples": 40,
+    "aux_coeff": 0.1,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue_per_group": 4,
+    "validate_every": 1,
+    "checkpoint_every": 1,
+    "state_every": 1,
+    "trace_flush_every": 1,
+    "skip_file_hashes": true,
+    "seed": 2026,
+    "split_seed": 2026
+  },
+  "history": [
+    {
+      "step": 1,
+      "training_objective_mean": 1.2691185474395752,
+      "latent_mse": 1.0189127922058105,
+      "pixel_mse": null,
+      "aux_mse": 2.502056837081909,
+      "gradient_norm_before_clip": 1.5418330430984497,
+      "clipped": true,
+      "clip_count": 1,
+      "clip_fraction": 1.0,
+      "longest_clip_streak": 1,
+      "dominant_gradient_group": "mse",
+      "cancellation_ratio": 1.0,
+      "active_by_group": {
+        "mse": 64.0
+      },
+      "used_by_group": {
+        "mse": 255
+      },
+      "rescued": {}
+    }
+  ]
+}

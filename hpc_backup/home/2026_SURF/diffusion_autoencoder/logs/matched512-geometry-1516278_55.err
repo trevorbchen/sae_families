@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/evaluate_lambda_sweep_model.py", line 174, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/evaluate_lambda_sweep_model.py", line 146, in main
+    metrics = reconstruction_metrics(
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/evaluate_lambda_sweep_model.py", line 60, in reconstruction_metrics
+    reconstruction, _, _ = model(target)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/tbchen/2026 SURF/dit_cifar10_pixel/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/train_spatial_map_sae.py", line 55, in forward
+    activations = F.relu(F.linear(flat - self.dec_bias, self.encoder, self.encoder_bias))
+RuntimeError: The size of tensor a (33554432) must match the size of tensor b (512) at non-singleton dimension 1

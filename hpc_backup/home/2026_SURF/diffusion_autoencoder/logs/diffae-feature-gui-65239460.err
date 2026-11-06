@@ -1,0 +1,23 @@
+[rank: 0] Global seed set to 0
+/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py:306: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.conf.fp16):
+----------------------------------------
+Exception occurred during processing of request from ('172.20.148.45', 48670)
+Traceback (most recent call last):
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/http/server.py", line 433, in handle
+    self.handle_one_request()
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/http/server.py", line 421, in handle_one_request
+    method()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/feature_permutation_gui.py", line 198, in do_GET
+    self.send_header("Content-Type", "application/json"); self.end_headers(); self.wfile.write(payload)
+  File "/central/software9/spack/opt/spack/linux-rhel9-x86_64/gcc-11.3.1/python-3.10.12-djdhgrqfgkgmpkwisvx7dm7jezl4mgy6/lib/python3.10/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+[2026-07-20T19:00:19.036] error: *** JOB 65239460 ON hpc-92-36 CANCELLED AT 2026-07-20T19:00:19 DUE TO TIME LIMIT ***

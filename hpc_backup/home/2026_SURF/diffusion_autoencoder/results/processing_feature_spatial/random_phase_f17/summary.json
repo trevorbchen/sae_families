@@ -1,0 +1,54 @@
+{
+  "processing_feature": {
+    "feature": "random_phase",
+    "prevalence": 0.1,
+    "train_positive_count": 1474,
+    "valid_positive_count": 164,
+    "paired_valid_count": 1639,
+    "jpeg_quality": null,
+    "frequency_x": 17,
+    "frequency_y": 17,
+    "frequency_radius": 24.041630560342615,
+    "amplitude_8bit": 3.0,
+    "phase": "deterministic_uniform_per_image",
+    "seed": 260810
+  },
+  "runs": [
+    {
+      "processing_feature": "random_phase",
+      "objective": "latent_mse",
+      "seed": 2030,
+      "selected_feature": 1769,
+      "heldout_single_feature_auc": 0.6774390339851379,
+      "heldout_single_feature_separation_auc": 0.6774390339851379,
+      "heldout_top1_probe_auc": 0.6774390339851379,
+      "heldout_top5_probe_auc": 0.7516433596611023,
+      "heldout_top20_probe_auc": 0.7753896713256836,
+      "heldout_top100_probe_auc": 0.7794378399848938,
+      "clean_activation_rate": 0.0,
+      "transformed_activation_rate": 0.34960341453552246,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.48376333713531494,
+      "mean_standardized_pair_shift_norm": 11.977659225463867,
+      "mean_decoded_write_norm": 1.1492432355880737,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/random_phase_f17/pilot_saes/latent_mse/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "random_phase",
+      "objective": "fourier_high",
+      "seed": 2030,
+      "selected_feature": 2617,
+      "heldout_single_feature_auc": 0.47029000520706177,
+      "heldout_single_feature_separation_auc": 0.5297099947929382,
+      "heldout_top1_probe_auc": 0.5297099947929382,
+      "heldout_top5_probe_auc": 0.5612715482711792,
+      "heldout_top20_probe_auc": 0.5903903841972351,
+      "heldout_top100_probe_auc": 0.6287997961044312,
+      "clean_activation_rate": 0.7779133915901184,
+      "transformed_activation_rate": 0.7559487223625183,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.287181556224823,
+      "mean_standardized_pair_shift_norm": 11.977659225463867,
+      "mean_decoded_write_norm": 1.4666228294372559,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/random_phase_f17/pilot_saes/fourier_high/seed_2030/last.pt"
+    }
+  ]
+}

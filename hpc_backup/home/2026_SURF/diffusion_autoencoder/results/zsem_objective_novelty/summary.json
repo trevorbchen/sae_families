@@ -1,0 +1,92 @@
+{
+  "method": {
+    "reference_seed": 2030,
+    "validation_examples": 1639,
+    "candidate_count": 8,
+    "min_active": 10,
+    "cosine_threshold": 0.8,
+    "activation_correlation_threshold": 0.5,
+    "composition_limit_per_objective": 2000,
+    "new_definition": "active reference feature matching both same-objective seeds but no single feature in any of three latent-MSE baseline seeds"
+  },
+  "objectives": [
+    {
+      "objective": "latent_mse",
+      "valid_active_features": 744,
+      "stable_features": 0,
+      "stable_fraction": 0.0,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 0,
+      "new_fraction_among_stable": 0.0,
+      "new_activation_mass_fraction_among_stable": 0.0,
+      "composition_evaluated": 0,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 0
+    },
+    {
+      "objective": "laplacian",
+      "valid_active_features": 278,
+      "stable_features": 3,
+      "stable_fraction": 0.010791366919875145,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 3,
+      "new_fraction_among_stable": 1.0,
+      "new_activation_mass_fraction_among_stable": 1.0,
+      "composition_evaluated": 3,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 3
+    },
+    {
+      "objective": "fourier_bands",
+      "valid_active_features": 1042,
+      "stable_features": 2,
+      "stable_fraction": 0.0019193857442587614,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 2,
+      "new_fraction_among_stable": 1.0,
+      "new_activation_mass_fraction_among_stable": 1.0,
+      "composition_evaluated": 2,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 2
+    },
+    {
+      "objective": "fourier_low",
+      "valid_active_features": 1338,
+      "stable_features": 6,
+      "stable_fraction": 0.0044843051582574844,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 6,
+      "new_fraction_among_stable": 1.0,
+      "new_activation_mass_fraction_among_stable": 1.0,
+      "composition_evaluated": 6,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 6
+    },
+    {
+      "objective": "fourier_mid",
+      "valid_active_features": 1351,
+      "stable_features": 14,
+      "stable_fraction": 0.010362694039940834,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 14,
+      "new_fraction_among_stable": 1.0,
+      "new_activation_mass_fraction_among_stable": 1.0,
+      "composition_evaluated": 14,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 14
+    },
+    {
+      "objective": "fourier_high",
+      "valid_active_features": 734,
+      "stable_features": 1,
+      "stable_fraction": 0.00136239780113101,
+      "baseline_matched_stable_features": 0,
+      "new_reproducible_single_unmatched": 1,
+      "new_fraction_among_stable": 1.0,
+      "new_activation_mass_fraction_among_stable": 1.0,
+      "composition_evaluated": 1,
+      "split_or_merged_among_evaluated": 0,
+      "new_noncompositional_among_evaluated": 1
+    }
+  ]
+}

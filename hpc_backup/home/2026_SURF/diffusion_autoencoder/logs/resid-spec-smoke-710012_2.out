@@ -1,0 +1,52 @@
+{'gradient_calibration': {'method': 'fixed_initial_output_gradient_ratio', 'target_ratio': 0.1, 'examples': 32, 'mse_to_transformed_norm_ratio': {'median': 0.524604082107544, 'p05': 0.35031808316707613, 'p95': 0.8230450004339218}, 'transform_weight': 0.0524604082107544}}
+{'step': 1, 'loss': 0.11523093283176422, 'latent_mse': 0.102089524269104, 'transformed_loss': 0.0583404079079628, 'pixel_mse': 0.003660507733002305, 'transform_weight': 0.0524604082107544, 'gradient_norm_before_clip': 0.010295647196471691, 'used_features': 63, 'rescued': 0, 'elapsed_seconds': 0.4742095470428467}
+{'validation': {'base_mse': 0.4986301445975545, 'latent_mse': 0.49023564986298185, 'transformed_loss': 0.30131481688803763, 'pixel_mse': 0.017632523439074524, 'step': 1, 'valid_ev': 0.5132467510592189, 'mse_ratio_to_base': 0.9831648871903886, 'feasible': True, 'elapsed_seconds': 10.654067993164062}}
+{
+  "base_mse": 0.4986301445975545,
+  "latent_mse": 0.49023564986298185,
+  "transformed_loss": 0.30131481688803763,
+  "pixel_mse": 0.017632523439074524,
+  "objective": "fourier_mid",
+  "steps": 1,
+  "transform_weight": 0.0524604082107544,
+  "best_feasible_transformed_loss": 0.30131481688803763,
+  "best_valid_ev": 0.5132467510592189,
+  "valid_ev": 0.5132467510592189,
+  "mse_ratio_to_base": 0.9831648871903886,
+  "used_features": 63,
+  "gradient_calibration": {
+    "method": "fixed_initial_output_gradient_ratio",
+    "target_ratio": 0.1,
+    "examples": 32,
+    "mse_to_transformed_norm_ratio": {
+      "median": 0.524604082107544,
+      "p05": 0.35031808316707613,
+      "p95": 0.8230450004339218
+    },
+    "transform_weight": 0.0524604082107544
+  },
+  "config": {
+    "objective": "fourier_mid",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "autoencoder": "results/spatial_conv_ae/last.pt",
+    "base_sae": "/resnick/scratch/tbchen/surf_2026/grouped_spatial_conv_ae_bookkeeping_v1/original_16k_k64_seed2026/last.pt",
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/spatial_residual_specialists_v1_smoke/fourier_mid",
+    "feature_count": 2048,
+    "k": 8,
+    "steps": 1,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "lr_warmup": 1,
+    "lambda_warmup": 1,
+    "gradient_target_ratio": 0.1,
+    "calibration_examples": 32,
+    "mse_tolerance": 0.02,
+    "aux_coeff": 0.1,
+    "grad_clip": 1.0,
+    "reinit_every": 1000,
+    "dead_after": 3000,
+    "max_rescue": 64,
+    "validate_every": 1,
+    "seed": 2026
+  }
+}

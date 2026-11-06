@@ -1,0 +1,54 @@
+{'gradient_calibration': {'method': 'fixed_initial_output_gradient_ratio', 'target_ratio': 0.1, 'examples': 16, 'mse_to_transformed_norm_ratio': {'median': 17.267776489257812, 'p05': 11.498968362808228, 'p95': 34.45274114608765}, 'transform_weight': 1.7267776489257813}}
+{'step': 1, 'loss': 0.3758598268032074, 'latent_mse': 0.3398306667804718, 'transformed_loss': 0.004003086127340794, 'pixel_mse': 0.01121077686548233, 'transform_weight': 0.8633888244628907, 'gradient_norm_before_clip': 0.06848503649234772, 'used_features': 251, 'rescued': 0, 'elapsed_seconds': 0.667614221572876}
+{'validation': {'base_mse': 0.5268152062670352, 'latent_mse': 0.4928503808922852, 'transformed_loss': 0.005687719073471607, 'pixel_mse': 0.017498449613911265, 'step': 1, 'valid_ev': 0.5106505938356971, 'mse_ratio_to_base': 0.9355280087387348, 'feasible': True, 'elapsed_seconds': 10.386058330535889}}
+{'validation': {'base_mse': 0.5268152062670352, 'latent_mse': 0.4928537506094206, 'transformed_loss': 0.005684109153527178, 'pixel_mse': 0.017500605018237803, 'step': 5, 'valid_ev': 0.5106472480554298, 'mse_ratio_to_base': 0.9355344051318064, 'feasible': True, 'elapsed_seconds': 21.012462615966797}}
+{
+  "base_mse": 0.5268152062670352,
+  "latent_mse": 0.4928537506094206,
+  "transformed_loss": 0.005684109153527178,
+  "pixel_mse": 0.017500605018237803,
+  "objective": "laplacian",
+  "steps": 5,
+  "transform_weight": 1.7267776489257813,
+  "best_feasible_transformed_loss": 0.005684109153527178,
+  "best_valid_ev": 0.5106505938356971,
+  "valid_ev": 0.5106472480554298,
+  "mse_ratio_to_base": 0.9355344051318064,
+  "used_features": 1174,
+  "gradient_calibration": {
+    "method": "fixed_initial_output_gradient_ratio",
+    "target_ratio": 0.1,
+    "examples": 16,
+    "mse_to_transformed_norm_ratio": {
+      "median": 17.267776489257812,
+      "p05": 11.498968362808228,
+      "p95": 34.45274114608765
+    },
+    "transform_weight": 1.7267776489257813
+  },
+  "config": {
+    "objective": "laplacian",
+    "data": "/resnick/scratch/tbchen/surf_2026/spatial_conv_ae/ffhq_16384_latents.pt",
+    "autoencoder": "results/spatial_conv_ae/last.pt",
+    "base_sae": "/resnick/scratch/tbchen/surf_2026/spatial_residual_specialists_v1/base_mse_8192_k32/best_valid.pt",
+    "prior_specialist": [],
+    "out_dir": "/resnick/scratch/tbchen/surf_2026/sequential_residual_specialists_smoke/task_0",
+    "feature_count": 8192,
+    "k": 32,
+    "steps": 5,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "lr_warmup": 2,
+    "lambda_warmup": 2,
+    "gradient_target_ratio": 0.1,
+    "calibration_examples": 16,
+    "mse_tolerance": 0.02,
+    "aux_coeff": 0.1,
+    "grad_clip": 1.0,
+    "reinit_every": 0,
+    "dead_after": 3000,
+    "max_rescue": 64,
+    "validate_every": 5,
+    "seed": 2026
+  }
+}

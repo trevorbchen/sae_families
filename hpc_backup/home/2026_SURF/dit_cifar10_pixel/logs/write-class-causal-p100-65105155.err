@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/dit_cifar10_pixel/write_class_causal_ablation.py", line 367, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/dit_cifar10_pixel/write_class_causal_ablation.py", line 363, in main
+    run(args)
+  File "/resnick/home/tbchen/2026 SURF/dit_cifar10_pixel/write_class_causal_ablation.py", line 246, in run
+    ranked = load_ranked_features(args.feature_csv, args.min_active, args.min_abs_attribution, args.min_hits)
+  File "/resnick/home/tbchen/2026 SURF/dit_cifar10_pixel/write_class_causal_ablation.py", line 188, in load_ranked_features
+    with open(path, newline="", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'runs/write_class_direction_attribution_16x_k32/feature_class_specificity_zscore_filled_filtered.csv'

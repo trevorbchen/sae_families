@@ -1,0 +1,126 @@
+{
+  "processing_feature": {
+    "feature": "jpeg",
+    "prevalence": 0.1,
+    "train_positive_count": 1474,
+    "valid_positive_count": 164,
+    "paired_valid_count": 1639,
+    "jpeg_quality": 60,
+    "frequency_x": null,
+    "frequency_y": null,
+    "frequency_radius": null,
+    "amplitude_8bit": null,
+    "phase": null,
+    "seed": 260810
+  },
+  "runs": [
+    {
+      "processing_feature": "jpeg",
+      "objective": "latent_mse",
+      "seed": 2030,
+      "selected_feature": 1667,
+      "heldout_single_feature_auc": 0.5000007152557373,
+      "heldout_single_feature_separation_auc": 0.5000007152557373,
+      "heldout_top1_probe_auc": 0.5000007152557373,
+      "heldout_top5_probe_auc": 0.5177364945411682,
+      "heldout_top20_probe_auc": 0.5182004570960999,
+      "heldout_top100_probe_auc": 0.5336243510246277,
+      "clean_activation_rate": 0.0006101281032897532,
+      "transformed_activation_rate": 0.002440512413159013,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.038969770073890686,
+      "mean_standardized_pair_shift_norm": 13.889126777648926,
+      "mean_decoded_write_norm": 0.013048699125647545,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/jpeg_q60/pilot_saes/latent_mse/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "jpeg",
+      "objective": "laplacian",
+      "seed": 2030,
+      "selected_feature": 732,
+      "heldout_single_feature_auc": 0.467331200838089,
+      "heldout_single_feature_separation_auc": 0.532668799161911,
+      "heldout_top1_probe_auc": 0.5326687693595886,
+      "heldout_top5_probe_auc": 0.5524777173995972,
+      "heldout_top20_probe_auc": 0.5531989932060242,
+      "heldout_top100_probe_auc": 0.549992561340332,
+      "clean_activation_rate": 0.5619280338287354,
+      "transformed_activation_rate": 0.5137279033660889,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.15178191661834717,
+      "mean_standardized_pair_shift_norm": 13.889126777648926,
+      "mean_decoded_write_norm": 0.3814132511615753,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/jpeg_q60/pilot_saes/laplacian/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "jpeg",
+      "objective": "fourier_high",
+      "seed": 2030,
+      "selected_feature": 139,
+      "heldout_single_feature_auc": 0.5006097555160522,
+      "heldout_single_feature_separation_auc": 0.5006097555160522,
+      "heldout_top1_probe_auc": 0.5006097555160522,
+      "heldout_top5_probe_auc": 0.5000149011611938,
+      "heldout_top20_probe_auc": 0.5290377736091614,
+      "heldout_top100_probe_auc": 0.5252401828765869,
+      "clean_activation_rate": 0.0,
+      "transformed_activation_rate": 0.002440512413159013,
+      "decoder_atom_alignment_with_mean_latent_shift": -0.027687331661581993,
+      "mean_standardized_pair_shift_norm": 13.889126777648926,
+      "mean_decoded_write_norm": 0.0074112992733716965,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/jpeg_q60/pilot_saes/fourier_high/seed_2030/last.pt"
+    }
+  ]
+}
+{
+  "processing_feature": {
+    "feature": "random_phase",
+    "prevalence": 0.1,
+    "train_positive_count": 1474,
+    "valid_positive_count": 164,
+    "paired_valid_count": 1639,
+    "jpeg_quality": null,
+    "frequency_x": 17,
+    "frequency_y": 17,
+    "frequency_radius": 24.041630560342615,
+    "amplitude_8bit": 3.0,
+    "phase": "deterministic_uniform_per_image",
+    "seed": 260810
+  },
+  "runs": [
+    {
+      "processing_feature": "random_phase",
+      "objective": "latent_mse",
+      "seed": 2030,
+      "selected_feature": 1769,
+      "heldout_single_feature_auc": 0.6774390339851379,
+      "heldout_single_feature_separation_auc": 0.6774390339851379,
+      "heldout_top1_probe_auc": 0.6774390339851379,
+      "heldout_top5_probe_auc": 0.7516433596611023,
+      "heldout_top20_probe_auc": 0.7753896713256836,
+      "heldout_top100_probe_auc": 0.7794378399848938,
+      "clean_activation_rate": 0.0,
+      "transformed_activation_rate": 0.34960341453552246,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.48376333713531494,
+      "mean_standardized_pair_shift_norm": 11.977659225463867,
+      "mean_decoded_write_norm": 1.1492432355880737,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/random_phase_f17/pilot_saes/latent_mse/seed_2030/last.pt"
+    },
+    {
+      "processing_feature": "random_phase",
+      "objective": "fourier_high",
+      "seed": 2030,
+      "selected_feature": 2617,
+      "heldout_single_feature_auc": 0.47029000520706177,
+      "heldout_single_feature_separation_auc": 0.5297099947929382,
+      "heldout_top1_probe_auc": 0.5297099947929382,
+      "heldout_top5_probe_auc": 0.5612715482711792,
+      "heldout_top20_probe_auc": 0.5903903841972351,
+      "heldout_top100_probe_auc": 0.6287997961044312,
+      "clean_activation_rate": 0.7779133915901184,
+      "transformed_activation_rate": 0.7559487223625183,
+      "decoder_atom_alignment_with_mean_latent_shift": 0.287181556224823,
+      "mean_standardized_pair_shift_norm": 11.977659225463867,
+      "mean_decoded_write_norm": 1.4666228294372559,
+      "checkpoint": "/resnick/scratch/tbchen/surf_2026/processing_feature_spatial/random_phase_f17/pilot_saes/fourier_high/seed_2030/last.pt"
+    }
+  ]
+}

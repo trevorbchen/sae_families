@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/matched512_feature_permutation_gui.py", line 456, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/matched512_feature_permutation_gui.py", line 387, in main
+    server = FeatureServer(args)
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/matched512_feature_permutation_gui.py", line 283, in __init__
+    self.objectives[objective] = ObjectiveSAE(
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/matched512_feature_permutation_gui.py", line 253, in __init__
+    active.scatter_add_(0, idx.reshape(-1), torch.ones_like(vals))
+RuntimeError: Index tensor must have the same number of dimensions as src tensor

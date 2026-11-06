@@ -1,0 +1,26 @@
+geometry 25/100
+geometry 50/100
+geometry 75/100
+geometry 100/100
+{
+  "validation_elements": 1677824,
+  "latent_mse": 0.5963439298869224,
+  "target_variance": 1.0008969349756707,
+  "residual_variance": 0.5911269710241083,
+  "latent_explained_variance": 0.40940275630030065,
+  "objective": "weighted_laplacian",
+  "objective_label": "Laplacian",
+  "seed": 2030,
+  "lambda": 30.0,
+  "checkpoint": "/resnick/scratch/tbchen/surf_2026/sae_matched_512_v1/experiments/spatial_16x_k32/checkpoints/lambda_30p0/laplacian/seed_2030/last.pt",
+  "autoencoder_type": "spatial",
+  "feature_count": 8192,
+  "k": 32,
+  "evaluated_features": 100,
+  "geometry_metrics": [
+    "laplacian_norm",
+    "fourier_low_fraction",
+    "fourier_mid_fraction",
+    "fourier_high_fraction"
+  ]
+}

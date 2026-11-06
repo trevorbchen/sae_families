@@ -1,0 +1,31 @@
+[rank: 0] Global seed set to 0
+/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py:306: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(self.conf.fp16):
+Traceback (most recent call last):
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/prepare_zsem_objective_pilot.py", line 119, in <module>
+    main()
+  File "/resnick/home/tbchen/2026 SURF/diffusion_autoencoder/prepare_zsem_objective_pilot.py", line 77, in main
+    image = lit.render(noise, cond=cond, T=args.steps).clamp(0, 1)
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/experiment.py", line 127, in render
+    pred_img = render_condition(self.conf,
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/renderer.py", line 56, in render_condition
+    return sampler.sample(model=model,
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 208, in sample
+    return self.ddim_sample_loop(model,
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 735, in ddim_sample_loop
+    for sample in self.ddim_sample_loop_progressive(
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 795, in ddim_sample_loop_progressive
+    out = self.ddim_sample(
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 600, in ddim_sample
+    out = self.p_mean_variance(
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/diffusion.py", line 96, in p_mean_variance
+    return super().p_mean_variance(self._wrap_model(model), *args,
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 328, in p_mean_variance
+    model_variance = _extract_into_tensor(model_variance, t, x.shape)
+  File "/home/tbchen/2026 SURF/diffusion_autoencoder/official_diffae/diffusion/base.py", line 944, in _extract_into_tensor
+    res = th.from_numpy(arr).to(device=timesteps.device)[timesteps].float()
+RuntimeError: CUDA error: uncorrectable ECC error encountered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

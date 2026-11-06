@@ -1,0 +1,71 @@
+{
+  "fixed_feature": {
+    "feature": "fixed_diagonal_sinusoid",
+    "frequency_x": 17,
+    "frequency_y": 17,
+    "frequency_radius": 24.041630560342615,
+    "phase": 0.0,
+    "amplitude_8bit": 3.0,
+    "prevalence": 0.05,
+    "train_positive_count": 737,
+    "valid_positive_count": 82,
+    "paired_valid_count": 1639,
+    "seed": 260810
+  },
+  "runs": [
+    {
+      "objective": "latent_mse",
+      "seed": 2030,
+      "selected_feature": 3401,
+      "selection_direction": "activates",
+      "heldout_auc": 0.9963414669036865,
+      "heldout_separation_auc": 0.9963414669036865,
+      "heldout_paired_direction_accuracy": 0.992682933807373,
+      "discovery_mean_delta": 7.615204334259033,
+      "discovery_standardized_effect": 3.730452060699463,
+      "clean_activation_rate": 0.0,
+      "injected_activation_rate": 0.9902379512786865,
+      "decoder_atom_alignment_with_latent_shift": 0.9341916441917419,
+      "decoded_write_alignment_with_pattern": 0.39459145069122314,
+      "raw_latent_direction_auc": 0.9833967685699463,
+      "checkpoint": "results/fixed_feature_spatial/saes/latent_mse/seed_2030/last.pt",
+      "cross_seed_selected_atom_cosine": 0.9510161479314169
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2031,
+      "selected_feature": 508,
+      "selection_direction": "activates",
+      "heldout_auc": 0.9957317113876343,
+      "heldout_separation_auc": 0.9957317113876343,
+      "heldout_paired_direction_accuracy": 0.9914634227752686,
+      "discovery_mean_delta": 7.702274799346924,
+      "discovery_standardized_effect": 3.8534586429595947,
+      "clean_activation_rate": 0.0012202562065795064,
+      "injected_activation_rate": 0.992068350315094,
+      "decoder_atom_alignment_with_latent_shift": 0.9240864515304565,
+      "decoded_write_alignment_with_pattern": 0.42116811871528625,
+      "raw_latent_direction_auc": 0.9833967685699463,
+      "checkpoint": "results/fixed_feature_spatial/saes/latent_mse/seed_2031/last.pt",
+      "cross_seed_selected_atom_cosine": 0.9510161479314169
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2032,
+      "selected_feature": 2405,
+      "selection_direction": "activates",
+      "heldout_auc": 0.9969512224197388,
+      "heldout_separation_auc": 0.9969512224197388,
+      "heldout_paired_direction_accuracy": 0.9939024448394775,
+      "discovery_mean_delta": 7.688320159912109,
+      "discovery_standardized_effect": 3.6954264640808105,
+      "clean_activation_rate": 0.0,
+      "injected_activation_rate": 0.992068350315094,
+      "decoder_atom_alignment_with_latent_shift": 0.9512118101119995,
+      "decoded_write_alignment_with_pattern": 0.4856189787387848,
+      "raw_latent_direction_auc": 0.9833967685699463,
+      "checkpoint": "results/fixed_feature_spatial/saes/latent_mse/seed_2032/last.pt",
+      "cross_seed_selected_atom_cosine": 0.9510161479314169
+    }
+  ]
+}

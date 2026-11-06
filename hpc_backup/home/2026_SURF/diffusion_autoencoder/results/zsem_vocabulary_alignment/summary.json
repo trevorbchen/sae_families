@@ -1,0 +1,112 @@
+{
+  "method": {
+    "space": "standardized 512-dimensional DiffAE z_sem",
+    "validation_examples": 1639,
+    "min_active_examples": 10,
+    "objectives": [
+      "latent_mse",
+      "laplacian"
+    ],
+    "seeds": [
+      2030,
+      2031,
+      2032
+    ],
+    "primary_threshold": 0.7,
+    "hungarian_shared_definition": "encoder and decoder Hungarian assignments agree and both cosines meet the threshold"
+  },
+  "alive_features": {
+    "latent_mse_seed_2030": 744,
+    "latent_mse_seed_2031": 702,
+    "latent_mse_seed_2032": 726,
+    "laplacian_seed_2030": 271,
+    "laplacian_seed_2031": 290,
+    "laplacian_seed_2032": 303
+  },
+  "primary_threshold_rows": [
+    {
+      "objective": "latent_mse",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 744,
+      "within_mean_maxcos_reappearance_probability": 0.0033602151088416576,
+      "within_fraction_reappears_all_maxcos": 0.0026881720405071974,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 2,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 702,
+      "within_mean_maxcos_reappearance_probability": 0.004273504484444857,
+      "within_fraction_reappears_all_maxcos": 0.0028490028344094753,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 2,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "latent_mse",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 726,
+      "within_mean_maxcos_reappearance_probability": 0.003443526104092598,
+      "within_fraction_reappears_all_maxcos": 0.002754820976406336,
+      "within_mean_hungarian_reappearance_probability": 0.0,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 2,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2030,
+      "threshold": 0.7,
+      "alive_features": 271,
+      "within_mean_maxcos_reappearance_probability": 0.0479704812169075,
+      "within_fraction_reappears_all_maxcos": 0.036900367587804794,
+      "within_mean_hungarian_reappearance_probability": 0.0055350554175674915,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 10,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2031,
+      "threshold": 0.7,
+      "alive_features": 290,
+      "within_mean_maxcos_reappearance_probability": 0.06034482643008232,
+      "within_fraction_reappears_all_maxcos": 0.04137931019067764,
+      "within_mean_hungarian_reappearance_probability": 0.008620689623057842,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 12,
+      "within_all_cross_none_hungarian": 0
+    },
+    {
+      "objective": "laplacian",
+      "seed": 2032,
+      "threshold": 0.7,
+      "alive_features": 303,
+      "within_mean_maxcos_reappearance_probability": 0.042904291301965714,
+      "within_fraction_reappears_all_maxcos": 0.029702970758080482,
+      "within_mean_hungarian_reappearance_probability": 0.0066006602719426155,
+      "within_fraction_reappears_all_hungarian": 0.0,
+      "cross_mean_maxcos_match_probability": 0.0,
+      "cross_mean_hungarian_match_probability": 0.0,
+      "within_all_cross_none_maxcos": 9,
+      "within_all_cross_none_hungarian": 0
+    }
+  ]
+}
